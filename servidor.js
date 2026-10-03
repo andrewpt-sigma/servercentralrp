@@ -140,6 +140,4 @@ app.use((req, res) => {
     );
 });
 
-app.listen(3000, () => {
-    console.log("Servidor: http://localhost:3000");
-});
+app.listen(process.env.PORT || 3000, '0.0.0.0');
