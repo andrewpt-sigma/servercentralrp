@@ -10,19 +10,19 @@ const session = require("express-session");
 const APIKEY = process.env.API_KEY
 const MASTERKEY = process.env.MASTER_KEY
 
-app.use(
-    session({
-        secret: process.env.SESSION_SECRET, 
-        resave: false,
-        saveUninitialized: false,
-        cookie: {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === "production", 
-            sameSite: "lax",
-            maxAge: 1000 * 60 * 60 * 24, 
-        },
-    })
-);
+app.set('trust proxy', 1);
+
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    secure: true,
+    httpOnly: true,
+    sameSite: 'lax',
+    maxAge: 1000 * 60 * 60 * 24 * 7
+  }
+}));
 
 app.use(express.static(path.join(__dirname, "public")));
 
