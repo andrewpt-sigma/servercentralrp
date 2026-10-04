@@ -8,6 +8,7 @@ const app = express();
 const session = require("express-session");
 
 const APIKEY = process.env.API_KEY
+const MASTERKEY = process.env.MASTER_KEY
 
 app.use(
     session({
@@ -122,10 +123,16 @@ app.get("/auth/logout", (req, res) => {
     });
 });
 
-app.get('/test', (req, res) => {
-    if (req.headers.key == APIKEY){
-        res.send('AUTORIZADO')
-        console.log('autorizado')
+app.get('/status', (req, res) => {
+    if (req.headers.key == MASTERKEY){
+        console.log('Bot Resquest')
+        return res.json({
+            porta: process.env.PORT,
+            whitelist: "0",
+            callbackdc: process.env.DISCORD_REDIRECT_URI,
+            botstatus: "Online"
+
+        })
     }
     else {
         res.send('NAO AUTORIZADOR!')
