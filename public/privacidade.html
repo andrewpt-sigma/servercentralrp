@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central RP | Politica de Privacidade</title>
+    <link rel="stylesheet" href="assets/css/privacidade.css">
+    <link rel="icon" type="image/png" href="assets/css/img/centrar rp.png">
+</head>
+
+<body>
+    <div class="aviso">
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info preview-icon"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> ESTE SITE É APENAS PARA TREINAR LOGICA DE PROGRAMAÇÃO, COMO TAL, NÃO DEVE SER LEVADO A SERÍO.</p>
+    </div>
+    <header>
+        <span><img src="assets/css/img/logo.png" alt="" style="width: 100px;"></span>
+        <nav>
+            <a href="/" class="itens"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M224,120v96a8,8,0,0,1-8,8H160a8,8,0,0,1-8-8V164a4,4,0,0,0-4-4H108a4,4,0,0,0-4,4v52a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V120a16,16,0,0,1,4.69-11.31l80-80a16,16,0,0,1,22.62,0l80,80A16,16,0,0,1,224,120Z">
+                    </path>
+                </svg>Home</a>
+            <a href="#" class="itens"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM88,200a16,16,0,1,0,16,16A16,16,0,0,0,88,200Zm104,0a16,16,0,1,0,16,16A16,16,0,0,0,192,200Z">
+                    </path>
+                </svg> Loja</a>
+            <a href="#" class="itens"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M184,32H72A16,16,0,0,0,56,48V224a8,8,0,0,0,12.24,6.78L128,193.43l59.77,37.35A8,8,0,0,0,200,224V48A16,16,0,0,0,184,32Z">
+                    </path>
+                </svg> sobre</a>
+            <a href="http://localhost:3000/whitelist" class="itens"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                    height="20" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                        d="M200,32H163.74a47.92,47.92,0,0,0-71.48,0H56A16,16,0,0,0,40,48V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V48A16,16,0,0,0,200,32Zm-72,0a32,32,0,0,1,32,32H96A32,32,0,0,1,128,32Z">
+                    </path>
+                </svg> WhiteList</a>
+        </nav>
+        <div>
+            <a class="butao" id="butlogin"
+                href="https://discord.com/oauth2/authorize?client_id=1553075510840402090&response_type=code&redirect_uri=https%3A%2F%2Fcentralrp-b73q.onrender.com%2Fauth%2Fdiscord%2Fcallback&scope=identify+guilds">Iniciar
+                Sessão <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-log-in preview-icon">
+                    <path d="m10 17 5-5-5-5" />
+                    <path d="M15 12H3" />
+                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                </svg></a>
+            <button onclick="Abrirmenu()"><img id="avatar" src="" alt=""></button>
+            <div class="menu" id="menuser">
+                <p id="nome"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="#cacaca" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-user-round-check preview-icon">
+                        <path d="M2 21a8 8 0 0 1 13.292-6" />
+                        <circle cx="10" cy="8" r="5" />
+                        <path d="m16 19 2 2 4-4" />
+                    </svg> andrew_18355</p>
+                <a href="/auth/logout"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                        viewBox="0 0 24 24" fill="none" stroke="#cacaca" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-log-out preview-icon">
+                        <path d="m16 17 5-5-5-5" />
+                        <path d="M21 12H9" />
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                    </svg> Terminar Sessão</a>
+                <a href="/whitelist"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="#cacaca" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-clipboard-clock preview-icon">
+                        <path d="M16 14v2.2l1.6 1" />
+                        <path d="M16 4h2a2 2 0 0 1 2 2v.832" />
+                        <path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2" />
+                        <circle cx="16" cy="16" r="6" />
+                        <rect x="8" y="2" width="8" height="4" rx="1" />
+                    </svg> WhiteList</a>
+                <button><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
+                        stroke="#cacaca" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-trash preview-icon">
+                        <path d="M10 11v6" />
+                        <path d="M14 11v6" />
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                        <path d="M3 6h18" />
+                        <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                    </svg> Apagar Conta</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="header">
+                <h1>Central RP</h1>
+                <h2 class="p">Politica de Privacidade</h2>
+            </div>
+            <div class="pdf-container">
+                <iframe src="/public/assets/pdf/Política de Privacidade.pdf" title="Política de Privacidade Fake">
+                </iframe>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>

@@ -8,24 +8,31 @@
     font-weight: 600;
 }
 
+.aviso {
+    background-color: #0070f8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    justify-content: center;
+    color: white;
+        font-family: "Roboto", sans-serif;
+}
+
+.aviso p {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
 body {
     background-color: #0a0a0a;
     background-image: repeating-linear-gradient(43deg, #0a0a0a, #0a0a0a 20px, rgba(11, 11, 11, 1) 20px, rgba(11, 11, 11, 1) 40px);
     background-size: auto;
     max-height: 100%;
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
-
-}
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100%;
-    overflow-x: hidden;
+    color: #cacaca;
+    gap: 10px;
 }
 
 header {
@@ -108,103 +115,6 @@ header div .butao:hover {
     color: #cacaca;
     background-color: #0073ff;
     border: #0073ff solid 1px;
-
-}
-
-section {
-    padding: 5rem 3rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-section div {
-    color: #cacaca;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-section div h1 {
-    font-family: "Roboto", sans-serif;
-    font-size: 100px;
-    color: #cacaca;
-    text-shadow:
-        1px 1px 0px #666666,
-        2px 2px 0px #555555,
-        3px 3px 0px #444444,
-        4px 4px 0px #333333,
-        5px 5px 8px rgba(0, 0, 0, 0.5);
-}
-
-section div p {
-    font-size: 25px;
-    font-family: "Roboto", sans-serif;
-}
-
-section div span {
-    color: #0070f8;
-    text-shadow:
-        1px 1px 0px #0059c6,
-        2px 2px 0px #0059c6,
-        3px 3px 0px #0059c6,
-        4px 4px 0px #0059c6,
-        5px 5px 8px rgba(0, 0, 0, 0.5);
-}
-
-section div div {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-
-}
-
-section div div button {
-    padding: 10px 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5px;
-    color: #0a0a0a;
-    background-color: #cacaca;
-    border: #cacaca solid 1px;
-    font-family: "Roboto", sans-serif;
-    border-radius: 10px;
-    font-size: 17px;
-    transition: 0.2s ease-in;
-    cursor: pointer;
-}
-
-section div div button:hover {
-    color: #cacaca;
-    background-color: transparent;
-    border: #cacaca solid 1px;
-    transition: 0.2s ease-in;
-}
-
-section div div .but {
-    padding: 10px 25px;
-    color: #cacaca;
-    background-color: #0073ff;
-    border: none;
-    font-family: "Roboto", sans-serif;
-    border-radius: 10px;
-    font-size: 17px;
-    font-weight: 600;
-    border: #0070f8 solid 1px;
-    transition: 0.2s ease-in;
-    cursor: pointer;
-}
-
-section div div .but:hover {
-    padding: 10px 25px;
-    color: #cacaca;
-    background-color: transparent;
-    border: #cacaca solid 1px;
-    font-family: "Roboto", sans-serif;
-    transition: 0.2s ease-in;
-
 }
 
 .menu {
@@ -228,12 +138,12 @@ section div div .but:hover {
 .menu a {
     text-decoration: none;
     color: #cacaca;
-     font-family: "Roboto", sans-serif;
-     gap: 5px;
-         display: flex;
+    font-family: "Roboto", sans-serif;
+    gap: 5px;
+    display: flex;
     justify-content: center;
     flex-direction: row;
-        transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.2s;
     transform: scale(1);
 }
 
@@ -260,29 +170,52 @@ section div div .but:hover {
     color: #cacaca;
     font-family: "Roboto", sans-serif;
     gap: 5px;
-        font-size: 15px;
-        transition: all ease-in-out 0.2s;
+    font-size: 15px;
+    transition: all ease-in-out 0.2s;
 
 }
 
 .menu button:hover {
-        transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.2s;
     transform: scale(1.1);
 }
 
-.aviso {
-    background-color: #0070f8;
+section {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 5px;
+    flex-direction: column;
     justify-content: center;
-    color: white;
-        font-family: "Roboto", sans-serif;
+    align-items: center;
+    background-color: #0d0d0d;
+    margin: 2.5rem;
+    padding: 2.5rem;
+    border-radius: 30px;
+  border: #2f2f2f solid 1px;
 }
 
-.aviso p {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
+.pdf-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
+
+iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+    background: white;
+    border-radius: 8px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.p {
+    color: #0073ff;
+}
+

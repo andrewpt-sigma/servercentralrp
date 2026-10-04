@@ -150,7 +150,7 @@ main div .conteinerinputs2 .inputs {
 
 
 main div .conteinerinputs2 {
-    display: flex;
+    display: none;
     flex-direction: row;
     align-items: center;
     gap: 6rem;
@@ -217,7 +217,7 @@ main div .conteinerinputs2 div {
 
 .butconmteier .but2 {
     padding: 10px 10px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     gap: 5px;
@@ -270,4 +270,67 @@ label {
     background-color: #0d0d0d;
     transform: translate(-5px, 43px);
     width: fit-content;
+}
+
+.fontepequena {
+    font-size: 12px;
+}
+
+main .start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    color: #cacaca;
+}
+
+main .start a {
+    color: #0070f8;
+}
+
+
+.but4 {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    color: #cacaca;
+    background: #0070f8;
+    border: #0070f8 solid 1px;
+    font-family: "Roboto", sans-serif;
+    border-radius: 10px;
+    font-size: 17px;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+h3 {
+    font-size: 35px;
+}
+
+.but4:hover {
+    transition: 0.2s ease-in;
+    background: transparent;
+    border: #cacaca solid 1px;
+
+}
+
+.aviso {
+    background-color: #0070f8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    justify-content: center;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.aviso p {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
 }

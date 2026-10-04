@@ -47,6 +47,10 @@ app.get("/whitelist", limtett, (req, res) => {
     res.sendFile(path.join(__dirname, "public", "whitelist.html"));
 });
 
+app.get("/politica-privacidade", limtett, (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "privacidade.html"))
+})
+
 app.get("/gestor", limtett, (req, res) => {
     res.sendFile(path.join(__dirname, "public", "gestor.html"));
 });
