@@ -53,11 +53,8 @@ app.get("/politica-privacidade", limtett, (req, res) => {
 
 app.post("/whitelist/post/form", limtett, (req, res) => {
     const { roblox, email } = req.body
-    if (res.status == 200){
         console.log('suceesso', roblox)
-    } else {
-        console.log("icorreto")
-    }
+        res.json({ ok: true, recebido: req.body });
 })
 
 app.get("/gestor", limtett, (req, res) => {
