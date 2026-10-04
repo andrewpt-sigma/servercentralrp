@@ -51,6 +51,15 @@ app.get("/politica-privacidade", limtett, (req, res) => {
     res.sendFile(path.join(__dirname, "public", "privacidade.html"))
 })
 
+app.post("/whitelist/post/form", limtett, (req, res) => {
+    const { roblox, email } = req.body
+    if (res.status == 200){
+        console.log('suceesso', roblox)
+    } else {
+        console.log("icorreto")
+    }
+})
+
 app.get("/gestor", limtett, (req, res) => {
     res.sendFile(path.join(__dirname, "public", "gestor.html"));
 });
