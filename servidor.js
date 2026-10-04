@@ -7,8 +7,17 @@ const app = express();
 
 const session = require("express-session");
 
+const rateLimit = require("express-rate-limit");
+
 const APIKEY = process.env.API_KEY
 const MASTERKEY = process.env.MASTER_KEY
+
+const limtett = rateLimit({
+    windowMs: 60*1000,
+    max: 20,
+    standardHeaders: true,
+    message: { error: "Calma bro..."}
+})
 
 app.set('trust proxy', 1);
 
@@ -26,23 +35,23 @@ app.use(session({
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/", (req, res) => {
+app.get("/", limtett, (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-app.get("/loja", (req, res) => {
+app.get("/loja", limtett, (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-app.get("/whitelist", (req, res) => {
+app.get("/whitelist", limtett, (req, res) => {
     res.sendFile(path.join(__dirname, "public", "whitelist.html"));
 });
 
-app.get("/gestor", (req, res) => {
+app.get("/gestor", limtett, (req, res) => {
     res.sendFile(path.join(__dirname, "public", "gestor.html"));
 });
 
-app.get("/auth/discord/callback", async (req, res) => {
+app.get("/auth/discord/callback", limtett, async (req, res) => {
     const { code } = req.query;
 
     if (!code) {
@@ -110,7 +119,7 @@ app.get("/auth/discord/callback", async (req, res) => {
 
 });
 
-app.get("/callserver/me", (req, res) => {
+app.get("/callserver/me", limtett, (req, res) => {
     if (!req.session.discordUser) {
         return res.status(401).json({ error: "não autenticado" });
     }
@@ -123,7 +132,7 @@ app.get("/auth/logout", (req, res) => {
     });
 });
 
-app.get('/status', (req, res) => {
+app.get('/status', limtett, (req, res) => {
     if (req.headers.key == MASTERKEY){
         console.log('Bot Resquest')
         return res.json({
