@@ -128,6 +128,16 @@ app.get("/callserver/me", limtett, (req, res) => {
         return res.status(401).json({ error: "não autenticado" });
     }
     res.json(req.session.discordUser);
+        fetch("https://api.botghost.com/webhook/1555501611932196914/rsbjzr7ggfhzoitvpjb99vsa", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "33274561f19d93abc1e0c9fc29c9cb3a5eec8f832dc5304336740b9ad0b00708"
+            },
+            body: JSON.stringify({
+                variables: [{ name: "usuario", data: "Joao" }]
+        })
+    });
 });
 
 app.get("/auth/logout", (req, res) => {
