@@ -130,7 +130,8 @@ app.get('/status', (req, res) => {
             porta: process.env.PORT,
             whitelist: "0",
             callbackdc: process.env.DISCORD_REDIRECT_URI,
-            botstatus: "Online"
+            botstatus: "Online",
+            version: process.env.VERSAO
 
         })
     }
