@@ -135,7 +135,7 @@ app.get('/status', (req, res) => {
         })
     }
     else {
-        res.send('NAO AUTORIZADOR!')
+        res.status(401).send('Autenticação incorreta.')
     }
 })
 
