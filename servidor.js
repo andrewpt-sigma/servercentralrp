@@ -128,17 +128,6 @@ app.get("/callserver/me", limtett, (req, res) => {
         return res.status(401).json({ error: "não autenticado" });
     }
     res.json(req.session.discordUser);
-        fetch("https://discord.com/api/webhooks/1444320599617966080/ubYA-wj8fGQ3V2LmJx_MC-Sm2lA-eRST7d-ElYnBKdSVdgWqscY-QgLwvnJh2a0_JQke", {
-            method: "POST",
-            headers: {
-                  "username": "Central RP | Logs",
-                    "avatar_url": "https://cdn.discordapp.com/attachments/1345483794840420383/1556057071110062162/centrar_rp.png?backend=b2&ex=6ac2c693&is=6ac17513&hm=7a94f1cd3e512583f93acfaa6049bfcaf47a7b5c7b2eb50b0c838520a2785628&",
-                    "content": "Test",
-            },
-            body: JSON.stringify({
-                variables: [{ name: "usuario", data: "Joao" }]
-        })
-    });
 });
 
 app.get("/auth/logout", (req, res) => {

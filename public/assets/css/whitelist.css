@@ -149,6 +149,13 @@ main div .conteinerinputs2 .inputs {
     font-size: 20px;
 }
 
+main div .conteinerinputs3 .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
 
 main div .conteinerinputs2 {
     display: none;
@@ -163,6 +170,23 @@ main div .conteinerinputs2 div {
     align-items: center;
     gap: 30px;
 }
+
+
+main div .conteinerinputs3 {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 6rem;
+}
+
+main div .conteinerinputs3 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+
 
 .butconmteier {
     width: 100%;
