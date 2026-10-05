@@ -60,12 +60,13 @@ function iniciar() {
     inputnext()
 }
 
+const Displayname = document.getElementById('nomee')
+
 var Aberto = false;
 const Avatarherf = document.getElementById('avatar')
 
 function DisplayUser(usere, avatarop) {
     const Butlogin = document.getElementById('butlogin')
-    const Displayname = document.getElementById('nomee')
 
     Butlogin.style = 'display: none;'
     Avatarherf.style = 'display: flex;'
