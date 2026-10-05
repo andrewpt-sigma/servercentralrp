@@ -25,9 +25,9 @@ function inputnext() {
         butanterior.style.display = "flex"
         tittle.textContent = 'Personagem'
         inputindex1 = 3
-    } 
+    }
 
-    
+
 }
 
 function inputanterior() {
@@ -52,7 +52,7 @@ function inputanterior() {
     }
 }
 
-function iniciar(){
+function iniciar() {
     const contstart = document.getElementById("start")
     const butiniciar = document.getElementById("butstart")
     butiniciar.style = "display: none;"
@@ -65,7 +65,7 @@ const Avatarherf = document.getElementById('avatar')
 
 function DisplayUser(usere, avatarop) {
     const Butlogin = document.getElementById('butlogin')
-    const Displayname = document.getElementById('nome')
+    const Displayname = document.getElementById('nomee')
 
     Butlogin.style = 'display: none;'
     Avatarherf.style = 'display: flex;'
@@ -96,7 +96,7 @@ fetch("/callserver/me", { credentials: "include" })
     })
     .then(user => {
 
-        if (user.avatar == null){
+        if (user.avatar == null) {
             Avatarherf.src = 'assets/css/img/0.png';
             DisplayUser(user)
         }

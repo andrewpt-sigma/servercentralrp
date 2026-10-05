@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,54 @@
     <link rel="icon" type="image/png" href="assets/css/img/centrar rp.png">
     <title>Central RP | WhiteList</title>
 </head>
+
 <body>
-        <div class="aviso">
-        <p><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info preview-icon"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> ESTE SITE É APENAS PARA TREINAR LOGICA DE PROGRAMAÇÃO, COMO TAL, NÃO DEVE SER LEVADO A SERÍO.</p>
+    <div class="aviso">
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-info preview-icon">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 16v-4" />
+                <path d="M12 8h.01" />
+            </svg> ESTE SITE É APENAS PARA TREINAR LOGICA DE PROGRAMAÇÃO, COMO TAL, NÃO DEVE SER LEVADO A SERÍO.</p>
     </div>
     <header>
         <span><img src="assets/css/img/logo.png" alt="" style="width: 100px;"></span>
         <div>
             <button onclick="Abrirmenu()"><img id="avatar" src="assets/css/img/centrar rp.png" alt="e"></button>
             <div class="menu" id="menuser">
-                <p id="nome"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#cacaca" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-check preview-icon"><path d="M2 21a8 8 0 0 1 13.292-6"/><circle cx="10" cy="8" r="5"/><path d="m16 19 2 2 4-4"/></svg> andrew_18355</p>
-                <a href="/auth/logout"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#cacaca" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out preview-icon"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg> Terminar Sessão</a>
-                <a href="/whitelist"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#cacaca" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-clock preview-icon"><path d="M16 14v2.2l1.6 1"/><path d="M16 4h2a2 2 0 0 1 2 2v.832"/><path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2"/><circle cx="16" cy="16" r="6"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> WhiteList</a>
-                <button><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#cacaca" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash preview-icon"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Apagar Conta</button>
+                <p id="nomee"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="#cacaca" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-user-round-check preview-icon">
+                        <path d="M2 21a8 8 0 0 1 13.292-6" />
+                        <circle cx="10" cy="8" r="5" />
+                        <path d="m16 19 2 2 4-4" />
+                    </svg> andrew_18355</p>
+                <a href="/auth/logout"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                        viewBox="0 0 24 24" fill="none" stroke="#cacaca" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-log-out preview-icon">
+                        <path d="m16 17 5-5-5-5" />
+                        <path d="M21 12H9" />
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                    </svg> Terminar Sessão</a>
+                <a href="/whitelist"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="#cacaca" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-clipboard-clock preview-icon">
+                        <path d="M16 14v2.2l1.6 1" />
+                        <path d="M16 4h2a2 2 0 0 1 2 2v.832" />
+                        <path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2" />
+                        <circle cx="16" cy="16" r="6" />
+                        <rect x="8" y="2" width="8" height="4" rx="1" />
+                    </svg> WhiteList</a>
+                <button><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
+                        stroke="#cacaca" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-trash preview-icon">
+                        <path d="M10 11v6" />
+                        <path d="M14 11v6" />
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                        <path d="M3 6h18" />
+                        <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                    </svg> Apagar Conta</button>
             </div>
         </div>
     </header>
@@ -32,45 +68,78 @@
             <div id="start" class="start">
                 <h3>Central RP</h3>
                 <p>Seja bem vindo a whitelist do Central RP.</p>
-                <p>Ao clicar em iníciar você concorda com a <a href="/politica-privacidade">Politica de privacidade</a> e que vai responder siceramente.</p>
+                <p>Ao clicar em iníciar você concorda com a <a href="/politica-privacidade">Politica de privacidade</a>
+                    e que vai responder siceramente.</p>
                 <button onclick='iniciar()' id="butstart" class="but4">Iniciar</button>
             </div>
             <div id="inputs1" class="conteinerinputs1">
                 <div class="inputs">
-                    <label><svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#828282" d="M362.3 393.5L381 323.7L530.9 363.9L472 583.5L56 472L96.2 322.2L362.3 393.5zM583.5 167.5L543.3 317.3L277.2 246L258.5 315.8L108.6 275.7L167.5 56L583.5 167.5z"/></svg> Seu roblox ID</label>
+                    <label><svg height="20" width="20" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path fill="#828282"
+                                d="M362.3 393.5L381 323.7L530.9 363.9L472 583.5L56 472L96.2 322.2L362.3 393.5zM583.5 167.5L543.3 317.3L277.2 246L258.5 315.8L108.6 275.7L167.5 56L583.5 167.5z" />
+                        </svg> Seu roblox ID</label>
                     <input type="text" placeholder="">
                 </div>
                 <div class="inputs">
-                    <label><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#838383" d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z"/></svg> Seu email</label>
+                    <label><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                            viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path fill="#838383"
+                                d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z" />
+                        </svg> Seu email</label>
                     <input type="email" placeholder="">
                 </div>
             </div>
-             <div id="inputs2" class="conteinerinputs2">
+            <div id="inputs2" class="conteinerinputs2">
                 <div>
                     <div class="inputs">
-                        <label><svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#828282" d="M362.3 393.5L381 323.7L530.9 363.9L472 583.5L56 472L96.2 322.2L362.3 393.5zM583.5 167.5L543.3 317.3L277.2 246L258.5 315.8L108.6 275.7L167.5 56L583.5 167.5z"/></svg> Qual a sua idade?</label>
+                        <label><svg height="20" width="20" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="#828282"
+                                    d="M362.3 393.5L381 323.7L530.9 363.9L472 583.5L56 472L96.2 322.2L362.3 393.5zM583.5 167.5L543.3 317.3L277.2 246L258.5 315.8L108.6 275.7L167.5 56L583.5 167.5z" />
+                            </svg> Qual a sua idade?</label>
                         <input type="text" placeholder="">
                     </div>
                     <div class="inputs">
-                        <label><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#838383" d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z"/></svg> Qual o seu país?</label>
+                        <label><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="#838383"
+                                    d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z" />
+                            </svg> Qual o seu país?</label>
                         <input type="text" placeholder="">
                     </div>
                     <div class="inputs">
-                        <label><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#838383" d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z"/></svg> Tens microfone?</label>
+                        <label><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="#838383"
+                                    d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z" />
+                            </svg> Tens microfone?</label>
                         <input type="text" placeholder="">
                     </div>
                 </div>
                 <div>
                     <div class="inputs">
-                        <label><svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#828282" d="M362.3 393.5L381 323.7L530.9 363.9L472 583.5L56 472L96.2 322.2L362.3 393.5zM583.5 167.5L543.3 317.3L277.2 246L258.5 315.8L108.6 275.7L167.5 56L583.5 167.5z"/></svg> Tens PC?</label>
+                        <label><svg height="20" width="20" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="#828282"
+                                    d="M362.3 393.5L381 323.7L530.9 363.9L472 583.5L56 472L96.2 322.2L362.3 393.5zM583.5 167.5L543.3 317.3L277.2 246L258.5 315.8L108.6 275.7L167.5 56L583.5 167.5z" />
+                            </svg> Tens PC?</label>
                         <input type="text" placeholder="">
                     </div>
                     <div class="inputs">
-                        <label class="fontepequena"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#838383" d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z"/></svg> Quanto tempo podes jogar por dia?</label>
+                        <label class="fontepequena"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="#838383"
+                                    d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z" />
+                            </svg> Quanto tempo podes jogar por dia?</label>
                         <input type="text" placeholder="">
                     </div>
                     <div class="inputs">
-                        <label class="fontepequena"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#838383" d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z"/></svg> Tens amigos dentro do RP?</label>
+                        <label class="fontepequena"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="#838383"
+                                    d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z" />
+                            </svg> Tens amigos dentro do RP?</label>
                         <input type="text" placeholder="">
                     </div>
                 </div>
@@ -78,43 +147,91 @@
             <div id="inputs3" class="conteinerinputs3">
                 <div>
                     <div class="inputs">
-                        <label><svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#828282" d="M362.3 393.5L381 323.7L530.9 363.9L472 583.5L56 472L96.2 322.2L362.3 393.5zM583.5 167.5L543.3 317.3L277.2 246L258.5 315.8L108.6 275.7L167.5 56L583.5 167.5z"/></svg> Nome</label>
+                        <label><svg height="20" width="20" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="#828282"
+                                    d="M362.3 393.5L381 323.7L530.9 363.9L472 583.5L56 472L96.2 322.2L362.3 393.5zM583.5 167.5L543.3 317.3L277.2 246L258.5 315.8L108.6 275.7L167.5 56L583.5 167.5z" />
+                            </svg> Nome</label>
                         <input type="text" placeholder="">
                     </div>
                     <div class="inputs">
-                        <label><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#838383" d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z"/></svg> Data de nascimento</label>
+                        <label><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="#838383"
+                                    d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z" />
+                            </svg> Data de nascimento</label>
                         <input type="text" placeholder="">
                     </div>
                     <div class="inputs">
-                        <label><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#838383" d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z"/></svg> Sexo</label>
+                        <label><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="#838383"
+                                    d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z" />
+                            </svg> Sexo</label>
                         <input type="text" placeholder="">
                     </div>
                 </div>
                 <div>
                     <div class="inputs">
-                        <label><svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#828282" d="M362.3 393.5L381 323.7L530.9 363.9L472 583.5L56 472L96.2 322.2L362.3 393.5zM583.5 167.5L543.3 317.3L277.2 246L258.5 315.8L108.6 275.7L167.5 56L583.5 167.5z"/></svg> Nome da Mãe</label>
+                        <label><svg height="20" width="20" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="#828282"
+                                    d="M362.3 393.5L381 323.7L530.9 363.9L472 583.5L56 472L96.2 322.2L362.3 393.5zM583.5 167.5L543.3 317.3L277.2 246L258.5 315.8L108.6 275.7L167.5 56L583.5 167.5z" />
+                            </svg> Nome da Mãe</label>
                         <input type="text" placeholder="">
                     </div>
                     <div class="inputs">
-                        <label ><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#838383" d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z"/></svg> Nome do Pai</label>
+                        <label><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="#838383"
+                                    d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z" />
+                            </svg> Nome do Pai</label>
                         <input type="text" placeholder="">
                     </div>
                     <div class="inputs">
-                        <label ><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#838383" d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z"/></svg> História</label>
+                        <label><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="#838383"
+                                    d="M564 325.8C564 467.3 467.1 568 324 568C186.8 568 76 457.2 76 320C76 182.8 186.8 72 324 72C390.8 72 447 96.5 490.3 136.9L422.8 201.8C334.5 116.6 170.3 180.6 170.3 320C170.3 406.5 239.4 476.6 324 476.6C422.2 476.6 459 406.2 464.8 369.7L324 369.7L324 284.4L560.1 284.4C562.4 297.1 564 309.3 564 325.8z" />
+                            </svg> História</label>
                         <input type="text" placeholder="">
                     </div>
                 </div>
             </div>
-            
+
             <div class="butconmteier">
-                <a href="/" class="but1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-from-line preview-icon"><path d="m9 6-6 6 6 6"/><path d="M3 12h14"/><path d="M21 19V5"/></svg> Voltar ao Início <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M224,120v96a8,8,0,0,1-8,8H160a8,8,0,0,1-8-8V164a4,4,0,0,0-4-4H108a4,4,0,0,0-4,4v52a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V120a16,16,0,0,1,4.69-11.31l80-80a16,16,0,0,1,22.62,0l80,80A16,16,0,0,1,224,120Z"></path></svg></a>
+                <a href="/" class="but1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-arrow-left-from-line preview-icon">
+                        <path d="m9 6-6 6 6 6" />
+                        <path d="M3 12h14" />
+                        <path d="M21 19V5" />
+                    </svg> Voltar ao Início <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor" viewBox="0 0 256 256">
+                        <path
+                            d="M224,120v96a8,8,0,0,1-8,8H160a8,8,0,0,1-8-8V164a4,4,0,0,0-4-4H108a4,4,0,0,0-4,4v52a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V120a16,16,0,0,1,4.69-11.31l80-80a16,16,0,0,1,22.62,0l80,80A16,16,0,0,1,224,120Z">
+                        </path>
+                    </svg></a>
                 <div>
-                    <button onclick="inputanterior()" id="butanterior"  class="but2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-left preview-icon"><path d="M6 8L2 12L6 16"/><path d="M2 12H22"/></svg> Anterior</button>
-                    <button onclick="inputnext()" class="but3">Próximo <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-right preview-icon"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg></button>
+                    <button onclick="inputanterior()" id="butanterior" class="but2"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-move-left preview-icon">
+                            <path d="M6 8L2 12L6 16" />
+                            <path d="M2 12H22" />
+                        </svg> Anterior</button>
+                    <button onclick="inputnext()" class="but3">Próximo <svg xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-move-right preview-icon">
+                            <path d="M18 8L22 12L18 16" />
+                            <path d="M2 12H22" />
+                        </svg></button>
                 </div>
             </div>
         </div>
         <script src="assets/js/whitelist.js"></script>
     </main>
 </body>
+
 </html>
