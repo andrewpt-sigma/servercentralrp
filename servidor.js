@@ -58,7 +58,7 @@ app.post("/whitelist/post/form", limtett, (req, res) => {
        return res.sendStatus(401)
     }
 
-    return res.sendStatus(201).send("sucesso")
+    return res.sendStatus(201)
 })
 
 
