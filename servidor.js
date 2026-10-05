@@ -9,6 +9,9 @@ const session = require("express-session");
 
 const rateLimit = require("express-rate-limit");
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 const APIKEY = process.env.API_KEY
 const MASTERKEY = process.env.MASTER_KEY
 
