@@ -4,6 +4,8 @@
     "express": "^5.2.1",
     "express-rate-limit": "^8.7.0",
     "express-session": "^1.19.0",
-    "git-filter-repo": "^0.0.30"
+    "git-filter-repo": "^0.0.30",
+    "otplib": "^13.5.0",
+    "qrcode": "^1.5.4"
   }
 }

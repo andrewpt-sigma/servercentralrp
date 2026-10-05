@@ -359,3 +359,66 @@ h3 {
     flex-direction: row;
     gap: 5px;
 }
+
+.menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    background-color: #101010;
+    border: #0059c6 solid 3px;
+    color: #cacaca;
+    position: absolute;
+    top: 3.5rem;
+    right: 6rem;
+    padding: 15px;
+    gap: 25px;
+    border-radius: 30px;
+    font-size: 15px;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color: #cacaca;
+     font-family: "Roboto", sans-serif;
+     gap: 5px;
+         display: flex;
+    justify-content: center;
+    flex-direction: row;
+        transition: all ease-in-out 0.2s;
+    transform: scale(1);
+}
+
+.menu a:hover {
+    transition: all ease-in-out 0.2s;
+    transform: scale(1.1);
+}
+
+.menu p {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-decoration: none;
+    color: #cacaca;
+    font-family: "Roboto", sans-serif;
+    gap: 5px;
+}
+
+.menu button {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-decoration: none;
+    color: #cacaca;
+    font-family: "Roboto", sans-serif;
+    gap: 5px;
+        font-size: 15px;
+        transition: all ease-in-out 0.2s;
+
+}
+
+.menu button:hover {
+        transition: all ease-in-out 0.2s;
+    transform: scale(1.1);
+}

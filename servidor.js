@@ -164,6 +164,8 @@ app.get('/status', limtett, (req, res) => {
     }
 })
 
+
+
 app.get("/bot/autoriztion/ticket", limtett, (req, res) => {
     const key = req.headers.key
 
