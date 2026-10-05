@@ -167,11 +167,11 @@ app.get('/status', limtett, (req, res) => {
 app.get("/bot/autoriztion/ticket", limtett, (req, res) => {
     const key = req.headers.key
 
-    if(!MASTERKEY || !key){
-       return res.sendStatus(202)
-    } else {
+    if (!MASTERKEY || !key || key !== MASTERKEY) {
         return res.sendStatus(401)
     }
+
+    return res.sendStatus(200)
 })
 
 
