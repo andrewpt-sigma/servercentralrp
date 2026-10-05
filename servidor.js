@@ -53,8 +53,20 @@ app.get("/politica-privacidade", limtett, (req, res) => {
 
 app.post("/whitelist/post/form", limtett, (req, res) => {
     const { roblox, email } = req.body
+    if (res.status == 200){
         console.log('suceesso', roblox)
-        res.json({ ok: true, recebido: req.body });
+        
+    } else {
+        console.log("icorreto")
+    }
+})
+
+app.get("/bot/autoriztion/ticket", limtett, (req, res) => {
+    if(req.headers.key == MASTERKEY){
+        res.status(202)
+    } else {
+        res.status(401)
+    }
 })
 
 app.get("/gestor", limtett, (req, res) => {
