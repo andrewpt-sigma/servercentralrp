@@ -60,53 +60,50 @@ function iniciar() {
     inputnext()
 }
 
-const Displayname = document.getElementById('nomee')
+const Displayname = document.getElementById('nomee');
+const Avatarherf = document.getElementById('avatar');
+const Butlogin = document.getElementById('butlogin');
 
-var Aberto = false;
-const Avatarherf = document.getElementById('avatar')
+let Aberto = false;
 
-function DisplayUser(usere, avatarop) {
-    const Butlogin = document.getElementById('butlogin')
+function DisplayUser(user) {
+    Butlogin.style.display = 'none';
+    Avatarherf.style.display = 'flex';
 
-    Butlogin.style = 'display: none;'
-    Avatarherf.style = 'display: flex;'
-    Avatarherf.src = `https://cdn.discordapp.com/avatars/${usere.id}/${usere.avatar}.png`;
-    Displayname.textContent = usere.username
+    Displayname.textContent = user.username;
 
+    if (user.avatar) {
+        Avatarherf.src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`;
+    } else {
+        Avatarherf.src = 'assets/css/img/0.png';
+    }
 }
 
 function Abrirmenu() {
-    const Menu = document.getElementById('menuser')
+    const Menu = document.getElementById('menuser');
 
-    if (Aberto == false) {
-        Menu.style = 'display: flex;'
+    if (!Aberto) {
+        Menu.style.display = 'flex';
         Aberto = true;
-    }
-    else {
-        Menu.style = 'display: none;'
+    } else {
+        Menu.style.display = 'none';
         Aberto = false;
     }
-
 }
 
+fetch('/callserver/me', {
+    credentials: 'include'
+})
+.then(res => {
+    if (!res.ok) {
+        throw new Error('Não autenticado');
+    }
 
-fetch("/callserver/me", { credentials: "include" })
-    .then(res => {
-        if (!res.ok) throw new Error("não autenticado");
-        return res.json();
-    })
-    .then(user => {
-
-        if (user.avatar == null) {
-            Avatarherf.src = 'assets/css/img/0.png';
-            DisplayUser(user)
-        }
-        else {
-            Avatarherf.src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`;
-            DisplayUser(user)
-        }
-
-    })
-    .catch(() => {
-
-    });
+    return res.json();
+})
+.then(user => {
+    DisplayUser(user);
+})
+.catch(error => {
+    console.error('Erro ao buscar usuário:', error);
+});
