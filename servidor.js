@@ -165,10 +165,12 @@ app.get('/status', limtett, (req, res) => {
 })
 
 app.get("/bot/autoriztion/ticket", limtett, (req, res) => {
-    if(req.headers.key == MASTERKEY){
-       return res.status(202)
+    const key = req.headers['key']
+
+    if(!MASTERKEY || !key){
+       return res.sendStatus(202)
     } else {
-        res.status(401)
+        return res.sendStatus(401)
     }
 })
 
