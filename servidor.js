@@ -55,10 +55,10 @@ app.post("/whitelist/post/form", limtett, (req, res) => {
     const { test1, test2 } = req.body;
 
     if (!test1 || !test2){
-        res.sendStatus(401)
+       return res.sendStatus(401)
     }
 
-    res.sendStatus(201).send(test1, test2 + "aqui seus dados")
+    return res.sendStatus(201).send("sucesso")
 })
 
 
