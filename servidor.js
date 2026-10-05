@@ -61,13 +61,6 @@ app.post("/whitelist/post/form", limtett, (req, res) => {
     }
 })
 
-app.get("/bot/autoriztion/ticket", limtett, (req, res) => {
-    if(req.headers.key == MASTERKEY){
-        res.status(202)
-    } else {
-        res.status(401)
-    }
-})
 
 app.get("/gestor", limtett, (req, res) => {
     res.sendFile(path.join(__dirname, "public", "gestor.html"));
@@ -171,6 +164,13 @@ app.get('/status', limtett, (req, res) => {
     }
 })
 
+app.get("/bot/autoriztion/ticket", limtett, (req, res) => {
+    if(req.headers.key == MASTERKEY){
+       return res.status(202)
+    } else {
+        res.status(401)
+    }
+})
 
 
 app.use((req, res) => {
