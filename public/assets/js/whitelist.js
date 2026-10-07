@@ -1,5 +1,4 @@
-const { json } = require("express")
-const session = require("express-session")
+
 
 let inputindex1 = 0
 
@@ -57,8 +56,6 @@ function inputanterior() {
         inputindex1 = 2
     }
 }
-
-inputnext() 
 
 function iniciar() {
     const contstart = document.getElementById("start")
