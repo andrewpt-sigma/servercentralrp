@@ -12,12 +12,15 @@ function inputnext() {
 
     if (inputindex1 === 0) {
         cont1inputs1.style.display = "flex"
+        cont1inputs2.style.display = "none"
+        cont1inputs3.style.display = "none"
         butanterior.style.display = "none"
         tittle.textContent = 'Informações'
         inputindex1 = 1
     } else if (inputindex1 === 1) {
         cont1inputs1.style.display = "none"
         cont1inputs2.style.display = "flex"
+        cont1inputs3.style.display = "none"
         butanterior.style.display = "flex"
         tittle.textContent = 'Pessoal'
         inputindex1 = 2
@@ -29,8 +32,6 @@ function inputnext() {
         tittle.textContent = 'Personagem'
         inputindex1 = 3
     }
-
-
 }
 
 function inputanterior() {
@@ -41,19 +42,23 @@ function inputanterior() {
     const tittle = document.getElementById("h2")
 
     if (inputindex1 === 2) {
-        cont1inputs2.style.display = "none"
         cont1inputs1.style.display = "flex"
+        cont1inputs2.style.display = "none"
+        cont1inputs3.style.display = "none"
         butanterior.style.display = "none"
         tittle.textContent = 'Informações'
         inputindex1 = 1
     } else if (inputindex1 === 3) {
-        cont1inputs2.style.display = "flex"
         cont1inputs1.style.display = "none"
+        cont1inputs2.style.display = "flex"
         cont1inputs3.style.display = "none"
+        butanterior.style.display = "flex"
         tittle.textContent = 'Pessoal'
         inputindex1 = 2
     }
 }
+
+inputnext() 
 
 function iniciar() {
     const contstart = document.getElementById("start")
@@ -96,7 +101,7 @@ function enviar(){
    const InputIDRoblox = document.getElementById('inputroblox').value
    const InpoutEmail = document.getElementById('inputemail').value
 
-   enviardados
+   enviardados(InputIDRoblox, InpoutEmail)
 }
 
 
