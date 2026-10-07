@@ -12,14 +12,20 @@ const rateLimit = require("express-rate-limit");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const APIKEY = process.env.API_KEY
 const MASTERKEY = process.env.MASTER_KEY
 
 const limtett = rateLimit({
     windowMs: 60*1000,
     max: 20,
     standardHeaders: true,
-    message: { error: "Calma bro..."}
+    message: { error: "Tentativa de ataque DDOS detectado."}
+})
+
+const apiwhitelist = rateLimit({
+    windowMs: 10000*100000,
+    max: 1,
+    standardHeaders: true,
+    message: { error: "So podes enviar 1 whitelist."}
 })
 
 app.set('trust proxy', 1);
@@ -54,13 +60,16 @@ app.get("/politica-privacidade", limtett, (req, res) => {
     res.sendFile(path.join(__dirname, "public", "privacidade.html"))
 })
 
-app.post("/whitelist/post/form", limtett, (req, res) => {
+app.post("/whitelist/api/post", apiwhitelist, (req, res) => {
     const { test1, test2 } = req.body;
 
     if (!test1 || !test2){
        return res.sendStatus(401)
+
     }
 
+    console.log(test1, test2)
+    
     return res.sendStatus(201)
 })
 
@@ -68,6 +77,8 @@ app.post("/whitelist/post/form", limtett, (req, res) => {
 app.get("/gestor", limtett, (req, res) => {
     res.sendFile(path.join(__dirname, "public", "gestor.html"));
 });
+
+app.get("/login", limtett)
 
 app.get("/auth/discord/callback", limtett, async (req, res) => {
     const { code } = req.query;

@@ -1,3 +1,6 @@
+const { json } = require("express")
+const session = require("express-session")
+
 let inputindex1 = 0
 
 function inputnext() {
@@ -89,11 +92,43 @@ function Abrirmenu() {
 
 }
 
+function enviar(){
+   const InputIDRoblox = document.getElementById('inputroblox').value
+   const InpoutEmail = document.getElementById('inputemail').value
+
+   enviardados
+}
+
+
+async function enviardados(Roblox, Email) {
+
+    const dados = { Roblox, Email }
+
+    try{
+        const reposta = await fetch('https://centralrp-b73q.onrender.com/whitelist/api/post', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',            
+            },
+            body: JSON.stringify(dados),
+        });
+
+    }
+
+    catch (error){
+        console.error(error)
+    }
+    
+}
+
 
 fetch("/callserver/me", { credentials: "include" })
     .then(res => {
-        if (!res.ok) throw new Error("não autenticado");
-        return res.json();
+        if (!res.ok) 
+            throw new Error("não autenticado");
+            return res.json();
+            const enviar = window.location.href = "/login"
+        
     })
     .then(user => {
 
