@@ -1,4 +1,6 @@
-
+const mainid = document.getElementById('main')
+const headerid = document.getElementById('header')
+const loadingid = document.getElementById('loading')
 
 let inputindex1 = 0
 
@@ -135,9 +137,15 @@ fetch("/callserver/me", { credentials: "include" })
         if (user.avatar == null) {
             Avatarherf.src = 'assets/css/img/0.png'
             DisplayUser(user)
+            mainid.style = 'display: flex;'
+            headerid = 'display: flex;'
+            loadingid = 'display: flex;'
         } else {
             Avatarherf.src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`
             DisplayUser(user)
+            mainid.style = 'display: flex;'
+            headerid = 'display: flex;'
+            loadingid = 'display: flex;'
         }
     })
     .catch(() => {})
