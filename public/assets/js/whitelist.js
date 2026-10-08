@@ -1,5 +1,5 @@
 const mainid = document.getElementById('main')
-const headerid = document.getElementById('header')
+const headerid = document.getElementsByName('header')
 const loadingid = document.getElementById('loading')
 
 let inputindex1 = 0
@@ -133,7 +133,7 @@ fetch("/callserver/me", { credentials: "include" })
         }
         mainid.style = 'display: flex;'
         headerid = 'display: flex;'
-        loadingid = 'display: flex;'
+        loadingid = 'display: none;'
         return res.json()
     })
     .then(user => {
