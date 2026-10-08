@@ -1,5 +1,5 @@
 const mainid = document.getElementById('main')
-const headerid = document.getElementsByName('header')
+const headerid = document.getElementById('headeer')
 const loadingid = document.getElementById('loading')
 
 let inputindex1 = 0
@@ -132,8 +132,8 @@ fetch("/callserver/me", { credentials: "include" })
             throw new Error("não autenticado")
         }
         mainid.style = 'display: flex;'
-        headerid = 'display: flex;'
-        loadingid = 'display: none;'
+        headerid.style = 'display: flex;'
+        loadingid.style = 'display: none;'
         return res.json()
     })
     .then(user => {
