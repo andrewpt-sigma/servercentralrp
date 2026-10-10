@@ -60,7 +60,7 @@ app.get("/politica-privacidade", limtett, (req, res) => {
     res.sendFile(path.join(__dirname, "public", "privacidade.html"))
 })
 
-app.post("/whitelist/api/post", apiwhitelist, (req, res) => {
+app.post("/whitelist/api/post", (req, res) => {
     const { test1, test2 } = req.body;
 
     if (!test1 || !test2){

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+body {
+    background-color: #0a0a0a;
+    background-image: repeating-linear-gradient(43deg, #0a0a0a, #0a0a0a 20px, rgba(11, 11, 11, 1) 20px, rgba(11, 11, 11, 1) 40px);
+    background-size: auto;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main {
+    padding: 25px;
+    border-radius: 30px;
+    background-color: #0d0d0d;
+    width: 400px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: #2f2f2f solid 1px;
+    align-items: center;
+    color: #cacaca;
+    font-family: "Roboto", sans-serif;
+}
+
+main .tex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+input {
+    background: transparent;
+    border: solid 2px #2f2f2f;
+    border-radius: 10px;
+    color: #cacaca;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+    width: 225px;
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+}
+
+main .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+main .inputs .input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.inunput {
+    display: flex;
+    flex-direction: column;
+}
+
+.logininput {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .but {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input:focus {
+    transition: all 0.2s ease-in-out;
+    border: solid 2px #565656;
+    background-color: #101010;
+    outline: none;
+}
+
+.login {
+    padding: 7px;
+}
+
+main img {
+    width: 100px;
+}

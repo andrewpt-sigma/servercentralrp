@@ -96,8 +96,8 @@ function Abrirmenu() {
 }
 
 function enviar(){
-   const InputIDRoblox = document.getElementById('inputroblox').value
-   const InpoutEmail = document.getElementById('inputemail').value
+   const InputIDRoblox = document.getElementById('inputroblox')
+   const InpoutEmail = document.getElementById('inputemail')
 
    enviardados(InputIDRoblox, InpoutEmail)
 }
@@ -105,15 +105,13 @@ function enviar(){
 
 async function enviardados(Roblox, Email) {
 
-    const dados = { Roblox, Email }
-
     try{
         const reposta = await fetch('https://centralrp-b73q.onrender.com/whitelist/api/post', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',            
             },
-            body: JSON.stringify(dados),
+            body: JSON.stringify(Roblox.value, Email.value),
         });
 
     }
@@ -128,7 +126,7 @@ async function enviardados(Roblox, Email) {
 fetch("/callserver/me", { credentials: "include" })
     .then(res => {
         if (!res.ok) {
-            window.location.href = "/login"
+            //window.location.href = "/login"
             throw new Error("não autenticado")
         }
         mainid.style = 'display: flex;'
