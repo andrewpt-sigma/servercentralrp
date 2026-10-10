@@ -103,16 +103,23 @@ function enviar(){
 }
 
 
-async function enviardados(Roblox, Email) {
+async function enviardados(test1, test2) {
 
     try{
-        const reposta = await fetch('https://centralrp-b73q.onrender.com/whitelist/api/post', {
+        const res = await fetch('https://centralrp-b73q.onrender.com/whitelist/api/post', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',            
             },
-            body: JSON.stringify(Roblox.value, Email.value),
+            body: JSON.stringify({ test1, test2 }),
         });
+
+        if (!res.ok) {
+            throw new Error(`Erro ${res.status}`);
+        }
+
+        const dados = await res.json();
+        console.log(dados)
 
     }
 
