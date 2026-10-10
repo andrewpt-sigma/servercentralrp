@@ -10,11 +10,26 @@ const app = express();
 const session = require("express-session");
 
 const rateLimit = require("express-rate-limit");
+const { group } = require("console");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const MASTERKEY = process.env.MASTER_KEY
+
+const CARACTERES = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+
+function gerarId() {
+    const grupos = [];
+    for (let g = 0; g < 4; g++) {
+        let grupo = '';
+        for (let i = 0; i < 4; i++) {
+            grupo += CARACTERES[crypto.randomInt(CARACTERES.length)];
+        }
+        grupos.push(grupo);
+    }
+    return grupos.join('-'); 
+}
 
 const pool = new Pool({
     connectionString: process.env.INTERNAL_DATABASE_URL,
@@ -74,7 +89,8 @@ app.post("/whitelist/api/post", (req, res) => {
        return res.sendStatus(401)
 
     }
-    console.log(robloxid, email)
+    const id = gerarId()
+    console.log(robloxid, email, id)
     return res.sendStatus(201)
 })
 
