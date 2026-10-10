@@ -118,8 +118,9 @@ async function enviardados(robloxid, email) {
             throw new Error(`Erro ${res.status}`);
         }
 
-        const  statusserver = await res.status();
-        console.log(statusserver)
+        if (res.status == 201){
+            console.log("criado")
+        }
 
     }
 
