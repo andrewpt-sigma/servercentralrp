@@ -1,5 +1,7 @@
 require("dotenv").config();
 
+const { Pool } = require('pg');
+
 const express = require("express");
 const path = require("path");
 
@@ -13,6 +15,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const MASTERKEY = process.env.MASTER_KEY
+
+const pool = new Pool({
+    connectionString: process.env.INTERNAL_DATABASE_URL,
+    ssl: { rejectUnauthorized: false }
+});
 
 const limtett = rateLimit({
     windowMs: 60*1000,

@@ -6,6 +6,7 @@
     "express-session": "^1.19.0",
     "git-filter-repo": "^0.0.30",
     "otplib": "^13.5.0",
+    "pg": "^8.23.1",
     "qrcode": "^1.5.4"
   }
 }
