@@ -61,15 +61,13 @@ app.get("/politica-privacidade", limtett, (req, res) => {
 })
 
 app.post("/whitelist/api/post", (req, res) => {
-    const { test1, test2 } = req.body;
+    const { robloxid, email } = req.body;
 
-    if (!test1 || !test2){
+    if (!robloxid || !email){
        return res.sendStatus(401)
 
     }
 
-    console.log(test1, test2)
-    
     return res.sendStatus(201)
 })
 
