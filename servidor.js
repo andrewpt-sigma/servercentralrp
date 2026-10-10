@@ -67,7 +67,7 @@ app.post("/whitelist/api/post", (req, res) => {
        return res.sendStatus(401)
 
     }
-
+    console.log(robloxid, email)
     return res.sendStatus(201)
 })
 
