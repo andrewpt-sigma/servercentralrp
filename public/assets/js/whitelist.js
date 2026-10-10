@@ -118,9 +118,6 @@ async function enviardados(test1, test2) {
             throw new Error(`Erro ${res.status}`);
         }
 
-        const dados = await res.json();
-        console.log(dados)
-
     }
 
     catch (error){
