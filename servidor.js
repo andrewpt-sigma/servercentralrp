@@ -78,32 +78,6 @@ client.once('ready', () => {
     setInterval(atualizarPresenca, 2000);
 });
 
-const BOTGHOST_URL = "https://api.botghost.com/webhook/1555501611932196914/ncric9s8c9k5s3kr61v07wrm";
-const API_KEY = process.env.BOTGHOST_API_KEY; 
-
-async function dispararWebhook(mensagem) {
-  const res = await fetch(BOTGHOST_URL, {
-    method: "POST",
-    headers: {
-      Authorization: API_KEY,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      variables: [
-        {
-          name: "message",
-          variable: "{event_message}",
-          value: mensagem,
-        },
-      ],
-    }),
-  });
-
-  if (!res.ok) {
-    throw new Error(`BotGhost respondeu ${res.status}: ${await res.text()}`);
-  }
-  return res.text();
-}
 
 
 client.login(process.env.BOT_TOKEN);
@@ -152,8 +126,7 @@ app.post("/whitelist/api/post", (req, res) => {
 
     }
     const whitelistid = gerarId();
-    const enviarwebhoock = dispararWebhook(sigma)
-    console.log(robloxid, email, whitelistid, enviarwebhoock)
+    console.log(robloxid, email, whitelistid)
     return res.status(201).json({
         id: whitelistid
     })
