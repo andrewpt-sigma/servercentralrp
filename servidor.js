@@ -59,17 +59,23 @@ const client = new Client({
 });
 
 client.once('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
+    console.log(`Ligado como ${client.user.tag}`);
 
-    client.user.setPresence({
-    activities: [
-        {
-            name: '© Central RP | https://centralrp-b73q.onrender.com',
-            type: ActivityType.Listening
-        }
-    ],
-    status: 'online'
-    });
+    const atualizarPresenca = () => {
+        client.user.setPresence({
+            activities: [
+                {
+                    name: '📡 Analisando https://centralrp-b73q.onrender.com',
+                    type: ActivityType.Listening
+                }
+            ],
+            status: 'online'
+        });
+    };
+
+    atualizarPresenca();
+
+    setInterval(atualizarPresenca, 2000);
 });
 
 client.login(process.env.BOT_TOKEN);
