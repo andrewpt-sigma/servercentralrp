@@ -12,6 +12,8 @@ const session = require("express-session");
 const rateLimit = require("express-rate-limit");
 const { group } = require("console");
 
+const crypto = require("crypto");
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -89,7 +91,7 @@ app.post("/whitelist/api/post", (req, res) => {
        return res.sendStatus(401)
 
     }
-    let whitelistid = gerarId();
+    const whitelistid = gerarId();
     console.log(robloxid, email, whitelistid)
     return res.sendStatus(201)
 })
