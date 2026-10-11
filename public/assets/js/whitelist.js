@@ -1,6 +1,11 @@
 const mainid = document.getElementById('main')
 const headerid = document.getElementById('headeer')
 const loadingid = document.getElementById('loading')
+const whitelistid = document.getElementById('whiteid')
+const mainheader = document.getElementById('inputs3')
+const buts = document.getElementById('butoes')
+const fim = document.getElementById('fim')
+const headerh2s = document.getElementById('h2s')
 
 let inputindex1 = 0
 
@@ -105,6 +110,11 @@ function enviar(){
 
 async function enviardados(robloxid, email) {
 
+    mainheader.style.display = 'none'
+    buts.style.display = 'none'
+    headerh2s.style.display = 'none'
+    loadingid.style = 'display: flex;'
+
     try{
         const res = await fetch('https://centralrp-b73q.onrender.com/whitelist/api/post', {
             method: 'POST',
@@ -119,7 +129,10 @@ async function enviardados(robloxid, email) {
         }
 
         if (res.status == 201){
-            console.log("criado")
+            const iddawhite = await res.json()
+            fim.style.display = 'flex'
+            whitelistid.textContent = iddawhite.id
+            console.log("enviado")
         }
 
     }
