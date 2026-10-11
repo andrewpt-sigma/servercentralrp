@@ -8,6 +8,7 @@ const fim = document.getElementById('fim')
 const headerh2s = document.getElementById('h2s')
 const cont1inputs1 = document.getElementById('inputs1')
 const cont1inputs2 = document.getElementById('inputs2')
+const itens = document.getElementById('tudo')
 
 let inputindex1 = 0
 
@@ -150,12 +151,13 @@ async function enviardados(robloxid, email) {
 fetch("/callserver/me", { credentials: "include" })
     .then(res => {
         if (!res.ok) {
-            //window.location.href = "/login"
+            window.location.href = "/login"
             throw new Error("não autenticado")
         }
         mainid.style = 'display: flex;'
         headerid.style = 'display: flex;'
         loadingid.style = 'display: none;'
+        itens.style = 'display: flex;'
         return res.json()
     })
     .then(user => {
