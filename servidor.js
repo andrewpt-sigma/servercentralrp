@@ -52,23 +52,23 @@ const apiwhitelist = rateLimit({
     message: { error: "So podes enviar 1 whitelist."}
 })
 
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const { Client, GatewayIntentBits, ActivityType } = require('discord.js');
 
-
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+const client = new Client({
+    intents: [GatewayIntentBits.Guilds]
 });
-const { ActivityType } = require("discord.js");
 
-client.on('ready', () => {
-    client.user.setStatus('available')
+client.once('ready', () => {
+    console.log(`Logged in as ${client.user.tag}!`);
+
     client.user.setPresence({
-        game: {
-            name: 'Central RP ',
-            type: "LISTENING",
-            url: "https://centralrp-b73q.onrender.com"
+    activities: [
+        {
+            name: '© Central RP | https://centralrp-b73q.onrender.com',
+            type: ActivityType.Listening
         }
+    ],
+    status: 'online'
     });
 });
 
