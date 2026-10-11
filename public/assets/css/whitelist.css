@@ -167,22 +167,31 @@ header h1 {
 }
 
 main {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #0d0d0d;
+    width: 900px;
+    height: 550px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: #2f2f2f solid 1px;
     align-items: center;
 }
 
 main .contei {
     padding: 25px;
     border-radius: 30px;
-    background-color: #0d0d0d;
+    background-color: transparent;
     width: 900px;
     height: 550px;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
-    border: #2f2f2f solid 1px;
+    border: none;
     align-items: center;
 
 }
@@ -196,6 +205,7 @@ main div h2 {
     color: #3e95ff;
 
 }
+
 
 h1 {
     font-family: "Roboto", sans-serif;

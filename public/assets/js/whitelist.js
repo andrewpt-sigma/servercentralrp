@@ -150,7 +150,7 @@ async function enviardados(robloxid, email) {
 fetch("/callserver/me", { credentials: "include" })
     .then(res => {
         if (!res.ok) {
-            window.location.href = "/login"
+            //window.location.href = "/login"
             throw new Error("não autenticado")
         }
         mainid.style = 'display: flex;'

@@ -41,9 +41,21 @@ main {
 
 main .tex {
     display: flex;
-    flex-direction: column;
+    border-radius: 15px;
+    flex-direction: row;
     align-items: center;
     gap: 5px;
+    background-color: #0d0d0d;
+    border: #2f2f2f solid 1px;
+    padding: 15px;
+}
+
+main .tex p {
+    font-size: 12px;
+}
+
+main .tex svg {
+    width: 35px;
 }
 
 input {
@@ -74,9 +86,48 @@ main .inputs .input {
     gap: 5px;
 }
 
+.discord {
+    background-color: #0070f8;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    color: #cacaca;
+    text-decoration: none;
+    align-items: center;
+    gap: 5px;
+    border-radius: 7px;
+    font-weight: 700;
+}
+
+.discord svg {
+    width: 20px;
+}
+
+.roblox {
+    background-color: #202020;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    color: #cacaca;
+    font-weight: 700;
+    text-decoration: none;
+    align-items: center;
+    gap: 5px;
+    border-radius: 7px;
+}
+
+.roblox svg {
+    width: 20px;
+}
+
 .inunput {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .logininput {
@@ -90,6 +141,7 @@ main .but {
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 5px;
 }
 
 input:focus {

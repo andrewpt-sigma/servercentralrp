@@ -52,6 +52,28 @@ const apiwhitelist = rateLimit({
     message: { error: "So podes enviar 1 whitelist."}
 })
 
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+const { ActivityType } = require("discord.js");
+
+client.on('ready', () => {
+    client.user.setStatus('available')
+    client.user.setPresence({
+        game: {
+            name: 'Central RP ',
+            type: "LISTENING",
+            url: "https://centralrp-b73q.onrender.com"
+        }
+    });
+});
+
+client.login(process.env.BOT_TOKEN);
+
 app.set('trust proxy', 1);
 
 app.use(session({
@@ -75,6 +97,10 @@ app.get("/", limtett, (req, res) => {
 app.get("/loja", limtett, (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
 });
+
+app.get("/login", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "login.html"))
+})
 
 app.get("/whitelist", limtett, (req, res) => {
     res.sendFile(path.join(__dirname, "public", "whitelist.html"));
