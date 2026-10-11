@@ -93,7 +93,7 @@ app.post("/whitelist/api/post", (req, res) => {
     }
     const whitelistid = gerarId();
     console.log(robloxid, email, whitelistid)
-    return res.sendStatus(201).json({
+    return res.status(201).json({
         id: whitelistid
     })
 })
