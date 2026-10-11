@@ -6,14 +6,14 @@ const mainheader = document.getElementById('inputs3')
 const buts = document.getElementById('butoes')
 const fim = document.getElementById('fim')
 const headerh2s = document.getElementById('h2s')
+const cont1inputs1 = document.getElementById('inputs1')
+const cont1inputs2 = document.getElementById('inputs2')
 
 let inputindex1 = 0
 
 function inputnext() {
     const butanterior = document.getElementById('butanterior')
     const cont1inputs1 = document.getElementById('inputs1')
-    const cont1inputs2 = document.getElementById('inputs2')
-    const cont1inputs3 = document.getElementById('inputs3')
     const tittle = document.getElementById("h2")
 
     if (inputindex1 === 0) {
@@ -114,6 +114,8 @@ async function enviardados(robloxid, email) {
     buts.style.display = 'none'
     headerh2s.style.display = 'none'
     loadingid.style = 'display: flex;'
+    cont1inputs1.style.display = 'none'
+    cont1inputs2.style.display = 'none'
 
     try{
         const res = await fetch('https://centralrp-b73q.onrender.com/whitelist/api/post', {
@@ -131,6 +133,7 @@ async function enviardados(robloxid, email) {
         if (res.status == 201){
             const iddawhite = await res.json()
             fim.style.display = 'flex'
+            loadingid.style = 'display: none;'
             whitelistid.textContent = iddawhite.id
             console.log("enviado")
         }
