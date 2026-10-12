@@ -67,6 +67,7 @@ function inputanterior() {
         cont1inputs2.style.display = "flex"
         cont1inputs3.style.display = "none"
         butanterior.style.display = "flex"
+        butenviar.style.display = "none"
         tittle.textContent = 'Pessoal'
         butproximop.style = "display: flex;"
         inputindex1 = 2
