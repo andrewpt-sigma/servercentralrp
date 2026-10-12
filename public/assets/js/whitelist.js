@@ -25,6 +25,7 @@ function inputnext() {
         cont1inputs2.style.display = "none"
         cont1inputs3.style.display = "none"
         butanterior.style.display = "none"
+        butenviar.style.display = "none"
         tittle.textContent = 'Informações'
         inputindex1 = 1
     } else if (inputindex1 === 1) {
@@ -57,6 +58,7 @@ function inputanterior() {
         cont1inputs1.style.display = "flex"
         cont1inputs2.style.display = "none"
         cont1inputs3.style.display = "none"
+        butenviar.style.display = "none"
         butanterior.style.display = "none"
         tittle.textContent = 'Informações'
         inputindex1 = 1
