@@ -9,6 +9,9 @@ const headerh2s = document.getElementById('h2s')
 const cont1inputs1 = document.getElementById('inputs1')
 const cont1inputs2 = document.getElementById('inputs2')
 const itens = document.getElementById('tudo')
+const tittle = document.getElementById("h2")
+const butenviar = document.getElementById('enviar')
+const proximo = document.getElementById('butproximop')
 
 let inputindex1 = 0
 
@@ -29,6 +32,7 @@ function inputnext() {
         cont1inputs2.style.display = "flex"
         cont1inputs3.style.display = "none"
         butanterior.style.display = "flex"
+        butenviar.style.display = "none"
         tittle.textContent = 'Pessoal'
         inputindex1 = 2
     } else if (inputindex1 === 2) {
@@ -36,7 +40,9 @@ function inputnext() {
         cont1inputs2.style.display = "none"
         cont1inputs3.style.display = "flex"
         butanterior.style.display = "flex"
+        butenviar.style.display = "flex"
         tittle.textContent = 'Personagem'
+        butproximop.style = "display: none;"
         inputindex1 = 3
     }
 }
@@ -46,7 +52,6 @@ function inputanterior() {
     const cont1inputs1 = document.getElementById('inputs1')
     const cont1inputs2 = document.getElementById('inputs2')
     const cont1inputs3 = document.getElementById('inputs3')
-    const tittle = document.getElementById("h2")
 
     if (inputindex1 === 2) {
         cont1inputs1.style.display = "flex"
@@ -61,6 +66,7 @@ function inputanterior() {
         cont1inputs3.style.display = "none"
         butanterior.style.display = "flex"
         tittle.textContent = 'Pessoal'
+        butproximop.style = "display: flex;"
         inputindex1 = 2
     }
 }
@@ -70,6 +76,8 @@ function iniciar() {
     const butiniciar = document.getElementById("butstart")
     butiniciar.style = "display: none;"
     contstart.style = "display: none;"
+    butproximop.style = "display: flex;"
+    tittle.textContent = "Informações"
     inputnext()
 }
 
@@ -151,7 +159,7 @@ async function enviardados(robloxid, email) {
 fetch("/callserver/me", { credentials: "include" })
     .then(res => {
         if (!res.ok) {
-            //window.location.href = "/login"
+            window.location.href = "/login"
             throw new Error("não autenticado")
         }
         mainid.style = 'display: flex;'

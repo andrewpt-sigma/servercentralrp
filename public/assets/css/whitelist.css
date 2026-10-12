@@ -449,7 +449,7 @@ main .start a {
 
 .but4 {
     padding: 10px 30px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     gap: 5px;
@@ -486,6 +486,27 @@ h3 {
     position: absolute;
     top: 0;
     width: 100%;
+}
+
+.enviar {
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    background-color: #0070f8;
+    padding: 10px 30px;
+    border: #0070f8 solid 1px;
+    color: #cacaca;
+    border-radius: 10px;
+    font-size: 17px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.enviar svg {
+    width: 16px;
+    
 }
 
 .aviso p {
