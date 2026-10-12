@@ -351,7 +351,7 @@ main div .conteinerinputs3 div {
 
 .butconmteier .but3 {
     padding: 10px 20px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     gap: 5px;
@@ -449,7 +449,7 @@ main .start a {
 
 .but4 {
     padding: 10px 30px;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 5px;
