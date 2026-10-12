@@ -14,7 +14,7 @@ let inputindex1 = 0
 
 function inputnext() {
     const butanterior = document.getElementById('butanterior')
-    const cont1inputs1 = document.getElementById('inputs1')
+    const cont1inputs3 = document.getElementById('inputs3')
     const tittle = document.getElementById("h2")
 
     if (inputindex1 === 0) {
@@ -151,7 +151,7 @@ async function enviardados(robloxid, email) {
 fetch("/callserver/me", { credentials: "include" })
     .then(res => {
         if (!res.ok) {
-            window.location.href = "/login"
+            //window.location.href = "/login"
             throw new Error("não autenticado")
         }
         mainid.style = 'display: flex;'
