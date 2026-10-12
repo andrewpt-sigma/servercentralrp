@@ -163,8 +163,10 @@ fetch("/callserver/me", { credentials: "include" })
     .then(user => {
         if (user.avatar == null) {
             Avatarherf.src = 'assets/css/img/0.png'
+            Displayname.textContent = user.username
             DisplayUser(user)
         } else {
+            Displayname.textContent = user.username
             Avatarherf.src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`
             DisplayUser(user)
         }
