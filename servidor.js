@@ -1,7 +1,8 @@
 import "dotenv/config";
 import { WebhookClient, EmbedBuilder } from "discord.js";
 
-const { Pool } = require('pg');
+import pg from "pg";
+const { Pool } = pg;
 
 const express = require("express");
 const path = require("path");
