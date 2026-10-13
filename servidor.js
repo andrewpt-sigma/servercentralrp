@@ -57,7 +57,7 @@ const apiwhitelist = rateLimit({
     message: { error: "So podes enviar 1 whitelist."}
 })
 
-const { Client, GatewayIntentBits, ActivityType } = require('discord.js');
+import { Client, GatewayIntentBits, ActivityType } from "discord.js";
 
 const client = new Client({
     intents: [GatewayIntentBits.Guilds]
