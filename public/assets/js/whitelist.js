@@ -115,12 +115,24 @@ function Abrirmenu() {
 function enviar(){
    const InputIDRoblox = document.getElementById('inputroblox').value
    const InpoutEmail = document.getElementById('inputemail').value
+   const InputIdadePesoal = document.getElementById('InputIdadePesoal').value
+   const InputNacionalidadePessoal = document.getElementById('nacionalidade').value
+   const Microfone = document.getElementById('mic').value
+   const Tenspc = document.getElementById('pc').value
+   const Quanttempopodesjogar = document.getElementById('quantotempoingame').value
+   const Amigos = document.getElementById('amigos').value
+   const Nomedopers = document.getElementById('nomedopers').value
+   const Nacimentopers = document.getElementById('nacimentopers').value
+   const Sexodopers = document.getElementById('sexodopers').value
+   const Maedopers = document.getAnimations('maedopers').value
+   const Paidopers = document.getElementById('paidopers').value
+   const Hisotria = document.getElementById('hisotria').value
 
-   enviardados(InputIDRoblox, InpoutEmail)
+   enviardados(InputIDRoblox, InpoutEmail, InputIdadePesoal, InputNacionalidadePessoal, Microfone, Tenspc, Quanttempopodesjogar, Amigos, Nomedopers, Nacimentopers, Sexodopers, Maedopers, Paidopers, Hisotria)
 }
 
 
-async function enviardados(robloxid, email) {
+async function enviardados(robloxid, email, IdadePlayer, NacionalidaePlayer, Mic, Pc, TempodeJogo, Amigos, NomePers, DataPers, SexoPers, MaePers, PaiPers, History) {
 
     mainheader.style.display = 'none'
     buts.style.display = 'none'
@@ -130,12 +142,17 @@ async function enviardados(robloxid, email) {
     cont1inputs2.style.display = 'none'
 
     try{
+
+        if (!robloxid){
+            return alert('beta')
+        }
+
         const res = await fetch('https://centralrp-b73q.onrender.com/whitelist/api/post', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',            
             },
-            body: JSON.stringify({ robloxid, email }),
+            body: JSON.stringify({ robloxid, email, IdadePlayer, NacionalidaePlayer, Mic, Pc, TempodeJogo, Amigos, NomePers, DataPers, SexoPers, MaePers, PaiPers, History}),
         });
 
         if (!res.ok) {
