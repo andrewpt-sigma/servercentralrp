@@ -6,6 +6,7 @@ import crypto from "crypto";
 import path from "path";
 import pg from "pg";
 import { WebhookClient, EmbedBuilder } from "discord.js";
+const __dirname = import.meta.dirname;
 
 const { Pool } = pg;
 
