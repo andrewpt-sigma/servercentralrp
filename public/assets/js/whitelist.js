@@ -217,6 +217,8 @@ fetch("/callserver/me", { credentials: "include" })
             DisplayUser(user)
         } else {
             Displayname.textContent = user.username
+            UserNome = user.username
+            AvatarURL = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`
             Avatarherf.src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`
             DisplayUser(user)
         }

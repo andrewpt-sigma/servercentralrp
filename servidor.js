@@ -140,7 +140,7 @@ app.post("/whitelist/api/post", (req, res) => {
         "name": "Sistema de WhiteList"
       },
       "footer": {
-        "text": "Versão do Sistema: 0.0",
+        "text": `Versão do Sistema ${process.env.VERSAO}`,
         "icon_url": "https://media.discordapp.net/attachments/1442198504536670443/1559672368769671198/85336-typing.gif?ex=6acfed96&is=6ace9c16&hm=7401ab8f621bdb4f295ce14c2610f55595074a28499f35a3f9641f2621e3f29f&"
       },
       "thumbnail": {
