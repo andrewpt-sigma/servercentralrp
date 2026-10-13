@@ -124,7 +124,7 @@ function enviar(){
    const Nomedopers = document.getElementById('nomedopers').value
    const Nacimentopers = document.getElementById('nacimentopers').value
    const Sexodopers = document.getElementById('sexodopers').value
-   const Maedopers = document.getAnimations('maedopers').value
+   const Maedopers = document.getElementById('maedopers').value
    const Paidopers = document.getElementById('paidopers').value
    const Hisotria = document.getElementById('hisotria').value
 
