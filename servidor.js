@@ -21,7 +21,7 @@ const Webhoock = new WebhookClient({ url: 'https://discord.com/api/webhooks/1559
 const Emebad = new EmbedBuilder()
     .setTitle('Central RP | Logs')
     .setDescription('Teste')
-    .setColor(cacaca)
+    .setColor('#cacaca')
 
 
 const CARACTERES = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
