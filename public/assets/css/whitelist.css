@@ -504,6 +504,11 @@ h3 {
     gap: 5px;
 }
 
+.enviar:hover {
+    border: #cacaca solid 1px;
+    
+}
+
 .enviar svg {
     width: 16px;
     
