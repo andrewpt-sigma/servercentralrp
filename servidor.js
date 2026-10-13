@@ -1,20 +1,15 @@
 import "dotenv/config";
+import express from "express";
+import session from "express-session";
+import rateLimit from "express-rate-limit";
+import crypto from "crypto";
+import path from "path";
+import pg from "pg";
 import { WebhookClient, EmbedBuilder } from "discord.js";
 
-import pg from "pg";
 const { Pool } = pg;
 
-const express = require("express");
-const path = require("path");
-
 const app = express();
-
-const session = require("express-session");
-
-const rateLimit = require("express-rate-limit");
-const { group } = require("console");
-
-const crypto = require("crypto");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
