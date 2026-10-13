@@ -17,13 +17,6 @@ app.use(express.urlencoded({ extended: true }));
 
 const MASTERKEY = process.env.MASTER_KEY
 
-const Webhoock = new WebhookClient({ url: 'https://discord.com/api/webhooks/1559627468317528238/CyEDDjvZZ3mMRQE8-oQ1EAYSK_R3ajCCGTND7BToMcCOFSvo6kKiMTMBed4_CJY_1vt8'})
-
-const Emebad = new EmbedBuilder()
-    .setTitle('Central RP | Logs')
-    .setDescription('Teste')
-    .setColor('#cacaca')
-
 
 const CARACTERES = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 
@@ -125,18 +118,38 @@ app.get("/politica-privacidade", limtett, (req, res) => {
 })
 
 app.post("/whitelist/api/post", (req, res) => {
-    const { robloxid, email, IdadePlayer, NacionalidaePlayer, Mic, Pc, TempodeJogo, Amigos, NomePers, DataPers, SexoPers, MaePers, PaiPers, History } = req.body;
+    const { robloxid, email, IdadePlayer, NacionalidaePlayer, Mic, Pc, TempodeJogo, Amigos, NomePers, DataPers, SexoPers, MaePers, PaiPers, History, usernome, avatar} = req.body;
 
     if (!robloxid || !email || !IdadePlayer || !NacionalidaePlayer || !Mic || !Pc || !TempodeJogo || !Amigos || !NomePers || !DataPers || !SexoPers || !MaePers || !PaiPers || !History){
        return res.sendStatus(401)
 
     }
     const whitelistid = gerarId();
+
+
+    const Webhoock = new WebhookClient({ url: 'https://discord.com/api/webhooks/1559627468317528238/CyEDDjvZZ3mMRQE8-oQ1EAYSK_R3ajCCGTND7BToMcCOFSvo6kKiMTMBed4_CJY_1vt8'})
+
+
     Webhoock.send({
-        content: robloxid,
-        username: email,
-        embeds: [Emebad],
+          "embeds": [
+    {
+      "title": `Nova WhiteList | ${whitelistid}`,
+      "description": `**Informações:**\n> Nome - ${usernome}\n> Email - ${email}\n> Roblox - ${robloxid}\n**Pessoal:**\n> Idade - ${IdadePlayer}\n> País - ${NacionalidaePlayer}\n> Microfone - ${Mic}\n> PC - ${Pc}\n> Tempo - ${TempodeJogo}\n> Amigos - ${Amigos}\n**Personagem:**\n> Nome - ${NomePers}\n> Data de nascimento - ${DataPers}\n> Sexo - ${SexoPers}\n> Nome da Mãe - ${MaePers}\n> Nome do Pai - ${PaiPers}\n> Historia  - ${History}`,
+      "color": 4101631,
+      "author": {
+        "name": "Sistema de WhiteList"
+      },
+      "footer": {
+        "text": "Versão do Sistema: 0.0",
+        "icon_url": "https://media.discordapp.net/attachments/1442198504536670443/1559672368769671198/85336-typing.gif?ex=6acfed96&is=6ace9c16&hm=7401ab8f621bdb4f295ce14c2610f55595074a28499f35a3f9641f2621e3f29f&"
+      },
+      "thumbnail": {
+        "url": `${avatar}`
+      }
+    }
+  ],
     }).catch(console.error)
+
     console.log(robloxid, email, whitelistid)
     return res.status(201).json({
         id: whitelistid
