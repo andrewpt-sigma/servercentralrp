@@ -1,5 +1,7 @@
 require("dotenv").config();
 
+import { WebhookClient, EmbedBuilder } from 'discord.js';
+
 const { Pool } = require('pg');
 
 const express = require("express");
@@ -18,6 +20,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const MASTERKEY = process.env.MASTER_KEY
+
+const Webhoock = new WebhookClient({ url: 'https://discord.com/api/webhooks/1559627468317528238/CyEDDjvZZ3mMRQE8-oQ1EAYSK_R3ajCCGTND7BToMcCOFSvo6kKiMTMBed4_CJY_1vt8'})
+
+const Emebad = new EmbedBuilder()
+    .setTitle('Central RP | Logs')
+    .setDescription('Teste')
+    .setColor(cacaca)
+
 
 const CARACTERES = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 
@@ -126,6 +136,11 @@ app.post("/whitelist/api/post", (req, res) => {
 
     }
     const whitelistid = gerarId();
+    Webhoock.send({
+        content: robloxid,
+        username: email,
+        embeds: [Emebad],
+    }).catch(console.error)
     console.log(robloxid, email, whitelistid)
     return res.status(201).json({
         id: whitelistid
