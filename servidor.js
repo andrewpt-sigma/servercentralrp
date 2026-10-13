@@ -1,6 +1,5 @@
-require("dotenv").config();
-
-import { WebhookClient, EmbedBuilder } from 'discord.js';
+import "dotenv/config";
+import { WebhookClient, EmbedBuilder } from "discord.js";
 
 const { Pool } = require('pg');
 
