@@ -12,11 +12,35 @@ const itens = document.getElementById('tudo')
 const tittle = document.getElementById("h2")
 const butenviar = document.getElementById('enviar')
 const proximo = document.getElementById('butproximop')
+const InputIDRoblox = document.getElementById('inputroblox').value
+const InpoutEmail = document.getElementById('inputemail').value
+const InputIdadePesoal = document.getElementById('InputIdadePesoal').value
+const InputNacionalidadePessoal = document.getElementById('nacionalidade').value
+const Microfone = document.getElementById('mic').value
+const Tenspc = document.getElementById('pc').value
+const Quanttempopodesjogar = document.getElementById('quantotempoingame').value
+const Amigos = document.getElementById('amigos').value
+const Nomedopers = document.getElementById('nomedopers').value
+const Nacimentopers = document.getElementById('nacimentopers').value
+const Sexodopers = document.getElementById('sexodopers').value
+const Maedopers = document.getElementById('maedopers').value
+const Paidopers = document.getElementById('paidopers').value
+const Hisotria = document.getElementById('hisotria').value
 
 let UserNome = ''
 let AvatarURL = ''
 
 let inputindex1 = 0
+
+
+
+const input = document.querySelector('input[type="number"]');
+
+input.addEventListener('keydown', (e) => {
+    if (['e', 'E', '+', '-'].includes(e.key)) {
+        e.preventDefault();
+    }
+});
 
 function inputnext() {
     const butanterior = document.getElementById('butanterior')
@@ -116,20 +140,7 @@ function Abrirmenu() {
 }
 
 function enviar() {
-    const InputIDRoblox = document.getElementById('inputroblox').value
-    const InpoutEmail = document.getElementById('inputemail').value
-    const InputIdadePesoal = document.getElementById('InputIdadePesoal').value
-    const InputNacionalidadePessoal = document.getElementById('nacionalidade').value
-    const Microfone = document.getElementById('mic').value
-    const Tenspc = document.getElementById('pc').value
-    const Quanttempopodesjogar = document.getElementById('quantotempoingame').value
-    const Amigos = document.getElementById('amigos').value
-    const Nomedopers = document.getElementById('nomedopers').value
-    const Nacimentopers = document.getElementById('nacimentopers').value
-    const Sexodopers = document.getElementById('sexodopers').value
-    const Maedopers = document.getElementById('maedopers').value
-    const Paidopers = document.getElementById('paidopers').value
-    const Hisotria = document.getElementById('hisotria').value
+
 
     enviardados(InputIDRoblox, InpoutEmail, InputIdadePesoal, InputNacionalidadePessoal, Microfone, Tenspc, Quanttempopodesjogar, Amigos, Nomedopers, Nacimentopers, Sexodopers, Maedopers, Paidopers, Hisotria, UserNome, AvatarURL)
 }
@@ -196,10 +207,12 @@ async function enviardados(robloxid, email, IdadePlayer, NacionalidaePlayer, Mic
 }
 
 
+
+
 fetch("/callserver/me", { credentials: "include" })
     .then(res => {
         if (!res.ok) {
-            window.location.href = "/login"
+            //window.location.href = "/login"
             throw new Error("não autenticado")
         }
         mainid.style = 'display: flex;'

@@ -8,6 +8,13 @@ import pg from "pg";
 import { WebhookClient, EmbedBuilder } from "discord.js";
 const __dirname = import.meta.dirname;
 
+import "dotenv/config";
+import { Prisma, PrismaClient } from "./generated/prisma/client.js";
+import { PrismaPg } from "@prisma/adapter-pg";
+
+const adapter = new PrismaPg({ connectionString: process.env.INTERNAL_DATABASE_URL });
+export const prisma = new PrismaClient({ adapter });
+
 const { Pool } = pg;
 
 const app = express();
@@ -117,7 +124,7 @@ app.get("/politica-privacidade", limtett, (req, res) => {
     res.sendFile(path.join(__dirname, "public", "privacidade.html"))
 })
 
-app.post("/whitelist/api/post", (req, res) => {
+app.post("/whitelist/api/post", async (req, res) => {
     const { robloxid, email, IdadePlayer, NacionalidaePlayer, Mic, Pc, TempodeJogo, Amigos, NomePers, DataPers, SexoPers, MaePers, PaiPers, History, usernome, avatar} = req.body;
 
     if (!robloxid || !email || !IdadePlayer || !NacionalidaePlayer || !Mic || !Pc || !TempodeJogo || !Amigos || !NomePers || !DataPers || !SexoPers || !MaePers || !PaiPers || !History){
@@ -127,8 +134,15 @@ app.post("/whitelist/api/post", (req, res) => {
     const whitelistid = gerarId();
 
 
-    const Webhoock = new WebhookClient({ url: 'https://discord.com/api/webhooks/1559627468317528238/CyEDDjvZZ3mMRQE8-oQ1EAYSK_R3ajCCGTND7BToMcCOFSvo6kKiMTMBed4_CJY_1vt8'})
+    const Webhoock = new WebhookClient({ url: process.env.WEBHOOCK_WHITELIST})
 
+    try {
+        const prisma = await prisma.whitelist.create({ data: { whitelistid, email, NomePers } });
+        res.json(item);
+    }
+    catch (e) {
+
+    }
 
     Webhoock.send({
           "embeds": [
