@@ -1,0 +1,239 @@
+const mainid = document.getElementById('main')
+const headerid = document.getElementById('headeer')
+const loadingid = document.getElementById('loading')
+const whitelistid = document.getElementById('whiteid')
+const mainheader = document.getElementById('inputs3')
+const buts = document.getElementById('butoes')
+const fim = document.getElementById('fim')
+const headerh2s = document.getElementById('h2s')
+const cont1inputs1 = document.getElementById('inputs1')
+const cont1inputs2 = document.getElementById('inputs2')
+const itens = document.getElementById('tudo')
+const tittle = document.getElementById("h2")
+const butenviar = document.getElementById('enviar')
+const proximo = document.getElementById('butproximop')
+const InputIDRoblox = document.getElementById('inputroblox').value
+const InpoutEmail = document.getElementById('inputemail').value
+const InputIdadePesoal = document.getElementById('InputIdadePesoal').value
+const InputNacionalidadePessoal = document.getElementById('nacionalidade').value
+const Microfone = document.getElementById('mic').value
+const Tenspc = document.getElementById('pc').value
+const Quanttempopodesjogar = document.getElementById('quantotempoingame').value
+const Amigos = document.getElementById('amigos').value
+const Nomedopers = document.getElementById('nomedopers').value
+const Nacimentopers = document.getElementById('nacimentopers').value
+const Sexodopers = document.getElementById('sexodopers').value
+const Maedopers = document.getElementById('maedopers').value
+const Paidopers = document.getElementById('paidopers').value
+const Hisotria = document.getElementById('hisotria').value
+
+let UserNome = ''
+let AvatarURL = ''
+
+let inputindex1 = 0
+
+
+
+const input = document.querySelector('input[type="number"]');
+
+input.addEventListener('keydown', (e) => {
+    if (['e', 'E', '+', '-'].includes(e.key)) {
+        e.preventDefault();
+    }
+});
+
+function inputnext() {
+    const butanterior = document.getElementById('butanterior')
+    const cont1inputs3 = document.getElementById('inputs3')
+    const tittle = document.getElementById("h2")
+
+    if (inputindex1 === 0) {
+        cont1inputs1.style.display = "flex"
+        cont1inputs2.style.display = "none"
+        cont1inputs3.style.display = "none"
+        butanterior.style.display = "none"
+        butenviar.style.display = "none"
+        tittle.textContent = 'Informações'
+        inputindex1 = 1
+    } else if (inputindex1 === 1) {
+        cont1inputs1.style.display = "none"
+        cont1inputs2.style.display = "flex"
+        cont1inputs3.style.display = "none"
+        butanterior.style.display = "flex"
+        butenviar.style.display = "none"
+        tittle.textContent = 'Pessoal'
+        inputindex1 = 2
+    } else if (inputindex1 === 2) {
+        cont1inputs1.style.display = "none"
+        cont1inputs2.style.display = "none"
+        cont1inputs3.style.display = "flex"
+        butanterior.style.display = "flex"
+        butenviar.style.display = "flex"
+        tittle.textContent = 'Personagem'
+        butproximop.style = "display: none;"
+        inputindex1 = 3
+    }
+}
+
+function inputanterior() {
+    const butanterior = document.getElementById('butanterior')
+    const cont1inputs1 = document.getElementById('inputs1')
+    const cont1inputs2 = document.getElementById('inputs2')
+    const cont1inputs3 = document.getElementById('inputs3')
+
+    if (inputindex1 === 2) {
+        cont1inputs1.style.display = "flex"
+        cont1inputs2.style.display = "none"
+        cont1inputs3.style.display = "none"
+        butenviar.style.display = "none"
+        butanterior.style.display = "none"
+        tittle.textContent = 'Informações'
+        inputindex1 = 1
+    } else if (inputindex1 === 3) {
+        cont1inputs1.style.display = "none"
+        cont1inputs2.style.display = "flex"
+        cont1inputs3.style.display = "none"
+        butanterior.style.display = "flex"
+        butenviar.style.display = "none"
+        tittle.textContent = 'Pessoal'
+        butproximop.style = "display: flex;"
+        inputindex1 = 2
+    }
+}
+
+function iniciar() {
+    const contstart = document.getElementById("start")
+    const butiniciar = document.getElementById("butstart")
+    butiniciar.style = "display: none;"
+    contstart.style = "display: none;"
+    butproximop.style = "display: flex;"
+    tittle.textContent = "Informações"
+    inputnext()
+}
+
+const Displayname = document.getElementById('nomee')
+
+var Aberto = false;
+const Avatarherf = document.getElementById('avatar')
+
+function DisplayUser(user) {
+    document.getElementById('butlogin').style.display = 'none'
+    Avatarherf.style.display = 'flex'
+    Avatarherf.src = user.avatar
+        ? `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`
+        : 'assets/css/img/0.png'
+    Displayname.textContent = user.username
+}
+
+function Abrirmenu() {
+    const Menu = document.getElementById('menuser')
+
+    if (Aberto == false) {
+        Menu.style = 'display: flex;'
+        Aberto = true;
+    }
+    else {
+        Menu.style = 'display: none;'
+        Aberto = false;
+    }
+
+}
+
+function enviar() {
+
+
+    enviardados(InputIDRoblox, InpoutEmail, InputIdadePesoal, InputNacionalidadePessoal, Microfone, Tenspc, Quanttempopodesjogar, Amigos, Nomedopers, Nacimentopers, Sexodopers, Maedopers, Paidopers, Hisotria, UserNome, AvatarURL)
+}
+
+
+async function enviardados(robloxid, email, IdadePlayer, NacionalidaePlayer, Mic, Pc, TempodeJogo, Amigos, NomePers, DataPers, SexoPers, MaePers, PaiPers, History, usernome, avatar) {
+
+    mainheader.style.display = 'none'
+    buts.style.display = 'none'
+    headerh2s.style.display = 'none'
+    loadingid.style = 'display: flex;'
+    cont1inputs1.style.display = 'none'
+    cont1inputs2.style.display = 'none'
+
+    try {
+
+        if (!robloxid) {
+            return alert('beta')
+        }
+
+        const res = await fetch('https://centralrp-b73q.onrender.com/whitelist/api/post', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                robloxid,
+                email,
+                IdadePlayer,
+                NacionalidaePlayer,
+                Mic,
+                Pc,
+                TempodeJogo,
+                Amigos,
+                NomePers,
+                DataPers,
+                SexoPers,
+                MaePers,
+                PaiPers,
+                History,
+                usernome,
+                avatar
+            }),
+        });
+
+        if (!res.ok) {
+            throw new Error(`Erro ${res.status}`);
+        }
+
+        if (res.status == 201) {
+            const iddawhite = await res.json()
+            fim.style.display = 'flex'
+            loadingid.style = 'display: none;'
+            whitelistid.textContent = iddawhite.id
+            console.log("enviado")
+        }
+
+    }
+
+    catch (error) {
+        console.error(error)
+    }
+
+}
+
+
+
+
+fetch("/callserver/me", { credentials: "include" })
+    .then(res => {
+        if (!res.ok) {
+            //window.location.href = "/login"
+            throw new Error("não autenticado")
+        }
+        mainid.style = 'display: flex;'
+        headerid.style = 'display: flex;'
+        loadingid.style = 'display: none;'
+        itens.style = 'display: flex;'
+        return res.json()
+    })
+    .then(user => {
+        if (user.avatar == null) {
+            Avatarherf.src = 'assets/css/img/0.png'
+            Displayname.textContent = user.username
+            UserNome = user.username
+            AvatarURL = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`
+            DisplayUser(user)
+        } else {
+            Displayname.textContent = user.username
+            UserNome = user.username
+            AvatarURL = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`
+            Avatarherf.src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`
+            DisplayUser(user)
+        }
+    })
+    .catch(() => { })

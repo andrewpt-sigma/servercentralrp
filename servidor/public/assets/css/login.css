@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+.aviso {
+    background-color: #0070f8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    justify-content: center;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.aviso p {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+body {
+    background-color: #0a0a0a;
+    background-image: repeating-linear-gradient(43deg, #0a0a0a, #0a0a0a 20px, rgba(11, 11, 11, 1) 20px, rgba(11, 11, 11, 1) 40px);
+    background-size: auto;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main {
+    padding: 25px;
+    border-radius: 30px;
+    background-color: #0d0d0d;
+    width: 400px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: #2f2f2f solid 1px;
+    align-items: center;
+    color: #cacaca;
+    font-family: "Roboto", sans-serif;
+}
+
+main .tex {
+    display: flex;
+    border-radius: 15px;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    background-color: #0d0d0d;
+    border: #2f2f2f solid 1px;
+    padding: 15px;
+}
+
+main .tex p {
+    font-size: 12px;
+}
+
+main .tex svg {
+    width: 35px;
+}
+
+input {
+    background: transparent;
+    border: solid 2px #2f2f2f;
+    border-radius: 10px;
+    color: #cacaca;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+    width: 225px;
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+}
+
+main .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+main .inputs .input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.discord {
+    background-color: #0070f8;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    color: #cacaca;
+    text-decoration: none;
+    align-items: center;
+    gap: 5px;
+    border-radius: 7px;
+    font-weight: 700;
+    border: #0070f8 solid 1px;
+    transition: all ease-in-out 0.2s;
+}
+
+.discord:hover {
+    transition: all ease-in-out 0.2s;
+    background-color: transparent;
+    border: #0070f8 solid 1px;
+}
+
+.discord svg {
+    width: 20px;
+}
+
+.roblox {
+    background-color: #202020;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    color: #cacaca;
+    font-weight: 700;
+    text-decoration: none;
+    align-items: center;
+    gap: 5px;
+    border-radius: 7px;
+    border: #202020 solid 1px;
+    transition: all ease-in-out 0.2s;
+}
+
+.roblox:hover {
+    transition: all ease-in-out 0.2s;
+    background-color: transparent;
+    border: #E51F04 solid 1px;
+}
+
+.roblox svg {
+    width: 20px;
+}
+
+.inunput {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.logininput {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .but {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+
+input:focus {
+    transition: all 0.2s ease-in-out;
+    border: solid 2px #565656;
+    background-color: #101010;
+    outline: none;
+}
+
+
+
+main img {
+    width: 100px;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+label svg {
+    width: 19px;
+}
+
+.logininput a {
+    color: #565656;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+
+}
+
+.logininput a:hover {
+    border-bottom: #565656 solid 2px;
+}
+
+.login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    background-color: #0070f8;
+    color: #cacaca;
+    border: #0070f8 solid 1px;
+    border-radius: 7px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+    justify-content: center;
+}
+
+.login:hover {
+    transition: all ease-in-out 0.2s;
+    background-color: transparent;
+    border: #cacaca solid 1px;
+}
