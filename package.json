@@ -15,6 +15,7 @@
     "prisma": "^7.10.1"
   },
   "scripts": {
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "start": "node servidor.js"
   }
 }
