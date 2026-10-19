@@ -9,7 +9,7 @@ import { WebhookClient, EmbedBuilder } from "discord.js";
 const __dirname = import.meta.dirname;
 
 import "dotenv/config";
-import { Prisma, PrismaClient } from "./generated/prisma/client.js";
+import { Prisma, PrismaClient } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 
 const adapter = new PrismaPg({ connectionString: process.env.INTERNAL_DATABASE_URL });
