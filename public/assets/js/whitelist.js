@@ -140,9 +140,7 @@ function Abrirmenu() {
 }
 
 function enviar() {
-
-
-    enviardados(InputIDRoblox, InpoutEmail, InputIdadePesoal, InputNacionalidadePessoal, Microfone, Tenspc, Quanttempopodesjogar, Amigos, Nomedopers, Nacimentopers, Sexodopers, Maedopers, Paidopers, Hisotria, UserNome, AvatarURL)
+    enviardados(InputIDRoblox.value, InpoutEmail.value, InputIdadePesoal.value, InputNacionalidadePessoal.value, Microfone.value, Tenspc.value, Quanttempopodesjogar.value, Amigos.value, Nomedopers.value, Nacimentopers.value, Sexodopers.value, Maedopers.value, Paidopers.value, Hisotria.value, UserNome.value, AvatarURL.value)
 }
 
 
@@ -156,9 +154,8 @@ async function enviardados(robloxid, email, IdadePlayer, NacionalidaePlayer, Mic
     cont1inputs2.style.display = 'none'
 
     try {
-        const roinputrobloxbloxid = document.getElementById('inputroblox').value;
 
-        if (!roinputrobloxbloxid) {
+        if (!robloxid) {
             return alert('beta')
         }
 
