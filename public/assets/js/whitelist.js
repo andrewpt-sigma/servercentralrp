@@ -156,8 +156,9 @@ async function enviardados(robloxid, email, IdadePlayer, NacionalidaePlayer, Mic
     cont1inputs2.style.display = 'none'
 
     try {
+        const roinputrobloxbloxid = document.getElementById('inputroblox').value;
 
-        if (!robloxid) {
+        if (!roinputrobloxbloxid) {
             return alert('beta')
         }
 
