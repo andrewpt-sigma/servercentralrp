@@ -2,7 +2,6 @@
   "dependencies": {
     "@prisma/client": "^6.19.3",
     "discord.js": "^14.27.0",
-    "dotenv": "^18.0.4",
     "express": "^5.2.1",
     "express-rate-limit": "^8.7.0",
     "express-session": "^1.19.0",
@@ -12,9 +11,10 @@
     "qrcode": "^1.5.4"
   },
   "devDependencies": {
+    "dotenv": "^18.0.8",
     "prisma": "^7.10.1"
   },
   "scripts": {
-  "postinstall": "prisma generate"
-}
+    "postinstall": "prisma generate"
+  }
 }
