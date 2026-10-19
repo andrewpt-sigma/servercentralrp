@@ -9,7 +9,6 @@
     "git-filter-repo": "^0.0.30",
     "otplib": "^13.5.0",
     "pg": "^8.23.1",
-    "type": "module",
     "qrcode": "^1.5.4"
   },
   "devDependencies": {
