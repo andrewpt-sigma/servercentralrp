@@ -151,7 +151,7 @@ app.post("/whitelist/api/post", async (req, res) => {
       },
       "footer": {
         "text": `Versão do Sistema ${process.env.VERSAO}`,
-        "icon_url": "https://media.discordapp.net/attachments/1442198504536670443/1559672368769671198/85336-typing.gif?ex=6acfed96&is=6ace9c16&hm=7401ab8f621bdb4f295ce14c2610f55595074a28499f35a3f9641f2621e3f29f&"
+        "icon_url": "https://cdn.discordapp.com/emojis/1556229181803733032.webp?size=128&animated=true"
       },
       "thumbnail": {
         "url": `${avatar}`
