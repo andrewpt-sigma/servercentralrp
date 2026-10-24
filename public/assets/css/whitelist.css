@@ -619,7 +619,7 @@ main .fim .idaviso {
     color: brown;
 }
 
-.id {
+.fim .id {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -636,4 +636,72 @@ main .fim .idaviso {
 
 .idtext {
     font-weight: 900;
+}
+
+.error {
+    width: 100%;
+    height: 100%;
+}
+
+main .error {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    color: #cacaca;
+    text-align: center;
+    justify-content: space-between;
+    
+}
+
+main .error div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main .error .idaviso {
+    text-align: center;
+    color: brown;
+}
+
+.error .id {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d0d0d;
+    border: #2f2f2f solid 1px;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 30px;
+    color: #0070f8;
+    
+}
+
+.error .id .s {
+    color: #fc0000;
+}
+
+.buttt {
+    background-color: #0070f8;
+    color: #fff;
+    padding: 7px;
+    border-radius: 15px;
+    outline: none;
+    border: #0059c6 1px solid;
+    transition: all ease-in-out 0.2s;
+    cursor: pointer;
+}
+
+.buttt:hover {
+    background-color: transparent;
+    transition: all ease-in-out 0.2s;
+}
+
+.idtexet {
+    font-size: 20px;
 }

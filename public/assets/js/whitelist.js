@@ -26,6 +26,9 @@ const Sexodopers = document.getElementById('sexodopers').value
 const Maedopers = document.getElementById('maedopers').value
 const Paidopers = document.getElementById('paidopers').value
 const Hisotria = document.getElementById('hisotria').value
+const ErorMenu = document.getElementById('errormenu')
+const Status = document.getElementById('serverstatus')
+const ErrorText = document.getElementById('errore')
 
 let UserNome = ''
 let AvatarURL = ''
@@ -155,10 +158,6 @@ async function enviardados(robloxid, email, IdadePlayer, NacionalidaePlayer, Mic
 
     try {
 
-        if (!robloxid) {
-            return alert('beta')
-        }
-
         const res = await fetch('https://centralrp-b73q.onrender.com/whitelist/api/post', {
             method: 'POST',
             headers: {
@@ -185,7 +184,11 @@ async function enviardados(robloxid, email, IdadePlayer, NacionalidaePlayer, Mic
         });
 
         if (!res.ok) {
-            throw new Error(`Erro ${res.status}`);
+            console.error(res.ok)
+            ErorMenu.style.display = 'flex'
+            loadingid.style = 'display: none;'
+            errore.textContent = res.ok
+            serverstatus.textContent = `Server Status ${res.status}`
         }
 
         if (res.status == 201) {
@@ -200,6 +203,10 @@ async function enviardados(robloxid, email, IdadePlayer, NacionalidaePlayer, Mic
 
     catch (error) {
         console.error(error)
+        ErorMenu.style.display = 'flex'
+        loadingid.style = 'display: none;'
+        errore.textContent = error
+        serverstatus.textContent = `Server Status ${res.status}`
     }
 
 }
@@ -210,7 +217,7 @@ async function enviardados(robloxid, email, IdadePlayer, NacionalidaePlayer, Mic
 fetch("/callserver/me", { credentials: "include" })
     .then(res => {
         if (!res.ok) {
-            //window.location.href = "/login"
+            window.location.href = "/login"
             throw new Error("não autenticado")
         }
         mainid.style = 'display: flex;'

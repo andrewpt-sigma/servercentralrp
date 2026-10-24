@@ -54,9 +54,9 @@
         </div>
     </header>
     <main id="main">
-        <span style="display: none;" id="loading" class="loader">e</span>
-        <div style="display: flex;" id="tudo" class="contei">
-            <div  id="h2s" class="h2s">
+        <span style="display: flex;" id="loading" class="loader">e</span>
+        <div id="tudo" class="contei">
+            <div id="h2s" class="h2s">
                 <h1>Whitelist</h1>
                 <h2 id="h2">início</h2>
             </div>
@@ -235,6 +235,19 @@
                         </svg></button>
                     <button id="enviar" class="enviar" onclick="enviar()">Enviar <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-horizontal preview-icon"><path d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"/><path d="M6 12h16"/></svg></button>
                 </div>
+            </div>
+            <div id="errormenu" class="error">
+                <div>
+                    <h3>Algo deu muito errado</h3>
+                    <p>Erro fatal ao tentar se comunicar com o servidor.</p>
+                </div>
+                <div class="id">
+                    <p class="s" id="serverstatus">Server Status: 501</p>
+                    <p id="errore" class="idtexet">Error</p>
+                    <button onclick="enviar()" class="buttt">Tentar Novamente</button>
+                </div>
+                <p class="idaviso">*Por favor tente mais tarde, se continuar a dar o mesmo erro entre em contacto pelo o discord no canal de ticket.</p>
+
             </div>
         </div>
         <script src="assets/js/whitelist.js"></script>
