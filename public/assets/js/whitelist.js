@@ -211,9 +211,6 @@ async function enviardados(robloxid, email, IdadePlayer, NacionalidaePlayer, Mic
 
 }
 
-
-
-
 fetch("/callserver/me", { credentials: "include" })
     .then(res => {
         if (!res.ok) {

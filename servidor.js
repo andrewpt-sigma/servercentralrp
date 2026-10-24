@@ -127,7 +127,7 @@ app.get("/politica-privacidade", limtett, (req, res) => {
 app.post("/whitelist/api/post", async (req, res) => {
     const { robloxid, email, IdadePlayer, NacionalidaePlayer, Mic, Pc, TempodeJogo, Amigos, NomePers, DataPers, SexoPers, MaePers, PaiPers, History, usernome, avatar} = req.body;
 
-    if (!robloxid || !email || !IdadePlayer || !NacionalidaePlayer || !Mic || !Pc || !TempodeJogo || !Amigos || !NomePers || !DataPers || !SexoPers || !MaePers || !PaiPers || !History){
+    if (!email || !NacionalidaePlayer || !Mic || !Pc || !TempodeJogo || !Amigos || !NomePers || !DataPers || !SexoPers || !MaePers || !PaiPers || !History){
        return res.sendStatus(401)
 
     }
