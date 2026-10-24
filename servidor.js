@@ -133,11 +133,12 @@ app.post("/whitelist/api/post", async (req, res) => {
     const Webhoock = new WebhookClient({ url: process.env.WEBHOOCK_WHITELIST})
 
     try {
-        const prisma = await prisma.whitelist.create({ data: { whitelistid, email, NomePers } });
+        await prisma.whitelist.create({ data: { whitelistid, email, NomePers } });
         res.json(item);
     }
     catch (e) {
-        console.log(e)
+        console.error("Erro ao guardar whitelist:", e.message);
+        return res.status(500).json({ error: "Erro ao guardar a whitelist" });
     }
 
     Webhoock.send({
