@@ -137,7 +137,7 @@ app.post("/whitelist/api/post", async (req, res) => {
         res.json(item);
     }
     catch (e) {
-
+        console.log(e)
     }
 
     Webhoock.send({
