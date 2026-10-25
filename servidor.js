@@ -129,11 +129,17 @@ app.post("/whitelist/api/post", async (req, res) => {
 
     const whitelistid = gerarId();
 
+    const data = new Date().toISOString()
 
     const Webhoock = new WebhookClient({ url: process.env.WEBHOOCK_WHITELIST})
 
     try {
-        await prisma.whitelist.create({ data: { whitelistid, email, NomePers } });
+        await prisma.whitelist.create({ data: { 
+                id: whitelistid,
+                email: email,
+                nome: usernome,
+                criadoEm: data
+         } });
         res.json(item);
     }
     catch (e) {
