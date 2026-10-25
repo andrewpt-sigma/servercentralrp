@@ -12,20 +12,20 @@ const itens = document.getElementById('tudo')
 const tittle = document.getElementById("h2")
 const butenviar = document.getElementById('enviar')
 const proximo = document.getElementById('butproximop')
-const InputIDRoblox = document.getElementById('inputroblox').value
-const InpoutEmail = document.getElementById('inputemail').value
-const InputIdadePesoal = document.getElementById('InputIdadePesoal').value
-const InputNacionalidadePessoal = document.getElementById('nacionalidade').value
-const Microfone = document.getElementById('mic').value
-const Tenspc = document.getElementById('pc').value
-const Quanttempopodesjogar = document.getElementById('quantotempoingame').value
-const Amigos = document.getElementById('amigos').value
-const Nomedopers = document.getElementById('nomedopers').value
-const Nacimentopers = document.getElementById('nacimentopers').value
-const Sexodopers = document.getElementById('sexodopers').value
-const Maedopers = document.getElementById('maedopers').value
-const Paidopers = document.getElementById('paidopers').value
-const Hisotria = document.getElementById('hisotria').value
+const InputIDRoblox = document.getElementById('inputroblox')
+const InpoutEmail = document.getElementById('inputemail')
+const InputIdadePesoal = document.getElementById('InputIdadePesoal')
+const InputNacionalidadePessoal = document.getElementById('nacionalidade')
+const Microfone = document.getElementById('mic')
+const Tenspc = document.getElementById('pc')
+const Quanttempopodesjogar = document.getElementById('quantotempoingame')
+const Amigos = document.getElementById('amigos')
+const Nomedopers = document.getElementById('nomedopers')
+const Nacimentopers = document.getElementById('nacimentopers')
+const Sexodopers = document.getElementById('sexodopers')
+const Maedopers = document.getElementById('maedopers')
+const Paidopers = document.getElementById('paidopers')
+const Hisotria = document.getElementById('hisotria')
 const ErorMenu = document.getElementById('errormenu')
 const Status = document.getElementById('serverstatus')
 const ErrorText = document.getElementById('errore')
@@ -143,7 +143,7 @@ function Abrirmenu() {
 }
 
 function enviar() {
-    enviardados(InputIDRoblox, InpoutEmail.value, InputIdadePesoal.value, InputNacionalidadePessoal.value, Microfone.value, Tenspc.value, Quanttempopodesjogar.value, Amigos.value, Nomedopers.value, Nacimentopers.value, Sexodopers.value, Maedopers.value, Paidopers.value, Hisotria.value, UserNome.value, AvatarURL)
+    enviardados(InputIDRoblox, InpoutEmail, InputIdadePesoal, InputNacionalidadePessoal, Microfone, Tenspc, Quanttempopodesjogar, Amigos, Nomedopers, Nacimentopers, Sexodopers, Maedopers, Paidopers, Hisotria, UserNome, AvatarURL)
 }
 
 
