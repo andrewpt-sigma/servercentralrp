@@ -140,7 +140,7 @@ app.post("/whitelist/api/post", async (req, res) => {
                 nome: usernome,
                 criadoEm: data
          } });
-        res.json(item);
+        console.log('sucesso')
     }
     catch (e) {
         console.error("Erro ao guardar whitelist:", e.message);
