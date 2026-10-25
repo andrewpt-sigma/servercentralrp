@@ -143,8 +143,26 @@ function Abrirmenu() {
 }
 
 function enviar() {
-    enviardados(InputIDRoblox, InpoutEmail, InputIdadePesoal, InputNacionalidadePessoal, Microfone, Tenspc, Quanttempopodesjogar, Amigos, Nomedopers, Nacimentopers, Sexodopers, Maedopers, Paidopers, Hisotria, UserNome, AvatarURL)
+    enviardados(
+        InputIDRoblox.value,
+        InpoutEmail.value,
+        InputIdadePesoal.value,
+        InputNacionalidadePessoal.value,
+        Microfone.value,
+        Tenspc.value,
+        Quanttempopodesjogar.value,
+        Amigos.value,
+        Nomedopers.value,
+        Nacimentopers.value,
+        Sexodopers.value,
+        Maedopers.value,
+        Paidopers.value,
+        Hisotria.value,
+        UserNome,
+        AvatarURL
+    )
 }
+
 
 
 async function enviardados(robloxid, email, IdadePlayer, NacionalidaePlayer, Mic, Pc, TempodeJogo, Amigos, NomePers, DataPers, SexoPers, MaePers, PaiPers, History, usernome, avatar) {
@@ -156,7 +174,7 @@ async function enviardados(robloxid, email, IdadePlayer, NacionalidaePlayer, Mic
     cont1inputs1.style.display = 'none'
     cont1inputs2.style.display = 'none'
 
-    if (!robloxid){
+    if (!robloxid) {
         alert('crias')
     }
 
