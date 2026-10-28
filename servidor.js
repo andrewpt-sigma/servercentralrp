@@ -281,15 +281,22 @@ app.get('/status', limtett, (req, res) => {
 
 app.get('/bot/basededados/scm', limtett, async (req, res) => {
 
-    const iddobot = req.userid
-    
-    const user = await prisma.administradores.findUnique({
-        where: {
-            id: iddobot
-        }
-    })
+    try{
 
-    res.send(user)
+        const iddobot = req.userid
+    
+        const user = await prisma.administradores.findUnique({
+            where: {
+                id: iddobot
+            }
+        })
+
+        res.send(user)
+    }
+    catch(error){
+        console.log(error)
+    }
+    
 
 })
 
