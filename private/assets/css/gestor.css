@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #0a0a0a;
+    background-image: repeating-linear-gradient(43deg, #0a0a0a, #0a0a0a 20px, rgba(11, 11, 11, 1) 20px, rgba(11, 11, 11, 1) 40px);
+    background-size: auto;
+    max-height: 100%;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+
+}
+
+header {
+    background-color: #0e0e0e;
+    padding: 10px;
+    min-width: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    padding: 30px;
+    border-right: #0070f8 solid 3px;
+    position: relative;
+    z-index: 2;
+}
+
+.text {
+    color: #fff;
+
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+
+    font-family: "Roboto", sans-serif;
+    gap: 15px;
+    font-size: 20px;
+
+}
+
+.logo p {
+    text-transform: uppercase;
+}
+
+.logo .text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.logo .b {
+    color: #0070f8;
+
+}
+
+header .logo img {
+    width: 80px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.divsnavs {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 5px;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.divsnavs .h2p {
+    color: #0070f8;
+    margin-bottom: 10px;
+}
+
+.buttype1 {
+    color: #cacaca;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+    border-bottom: #0e0e0e solid 3px;
+}
+
+.buttype1:hover {
+    transition: all ease-in-out 0.2s;
+    color: #0070f8;
+    border-bottom: #0070f8 solid 3px;
+    transform: scale(1.1);
+
+    svg {
+        fill: #0070f8;
+        transition: all ease-in-out 0.2s;
+    }
+}
+
+.buttype1 svg {
+    fill: #cacaca;
+    width: 20px;
+    transition: all ease-in-out 0.2s;
+}
+
+.footer {
+    font-family: "Roboto", sans-serif;
+    color: #cacaca;
+    font-size: 13px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    text-transform: uppercase;
+    color: #cacaca;
+}
+
+
+.l {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.top span {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    font-size: 20px;
+}
+
+.top span p {
+    color: #0070f8;
+}
+
+.l button {
+    border: #0070f8 solid 3px;
+    outline: none;
+    background: transparent;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.l button img {
+    width: 60px;
+    border-radius: 100%;
+}
+
+.pt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pt div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #cacaca;
+    text-transform: uppercase;
+}
+
+.pt div span {
+    font-size: 20px;
+    color: #0070f8;
+}
+
+.pt button {
+    height: 25px;
+    width: 125px;
+}

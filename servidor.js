@@ -176,6 +176,7 @@ app.post("/whitelist/api/post", async (req, res) => {
 
 app.get("/gestor", limtett, (req, res) => {
     res.sendFile(path.join(__dirname, "public", "gestor.html"));
+    
 });
 
 app.get("/login", limtett)
@@ -278,9 +279,22 @@ app.get('/status', limtett, (req, res) => {
     }
 })
 
+app.get('/bot/basededados/scm', limtett, async (req, res) => {
+
+    const iddobot = req.userid
+    
+    const user = await prisma.administradores.findUnique({
+        where: {
+            id: iddobot
+        }
+    })
+
+    res.send(user)
+
+})
 
 
-app.get("/bot/autoriztion/ticket", limtett, (req, res) => {
+app.get("/bot/autoriztion", limtett, (req, res) => {
     const key = req.headers.key
 
     if (!MASTERKEY || !key || key !== MASTERKEY) {

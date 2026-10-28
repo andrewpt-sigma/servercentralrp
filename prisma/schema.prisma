@@ -9,12 +9,35 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+  //url      = env("INTERNAL_DATABASE_URL")
 }
 
 model Whitelist {
-  id String @id
+  id String @id @unique
   email String @unique
   nome String
   criadoEm DateTime @default(now())
+  estadow Estado @default(PEDENTE)
+}
 
+enum Estado {
+  PEDENTE
+  APROVADA
+  REJEITADA
+}
+
+enum Cargo {
+  DONO
+  DIRETOR
+  MODERADOR
+}
+
+model Administradores {
+  id String @unique @id
+  user String @unique
+  email String @unique
+  senhahas String
+  criadoEm DateTime @default(now())
+  criadoPor String
+  cargo Cargo @default(MODERADOR)
 }
