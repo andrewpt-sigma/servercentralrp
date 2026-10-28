@@ -283,7 +283,7 @@ app.get('/bot/basededados/scm', limtett, async (req, res) => {
 
     try{
 
-        const iddobot = req.userid
+        const iddobot = req.headers.userid
     
         const user = await prisma.administradores.findUnique({
             where: {
