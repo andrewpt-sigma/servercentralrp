@@ -59,7 +59,6 @@ const apiwhitelist = rateLimit({
 })
 
 import { Client, GatewayIntentBits, ActivityType } from "discord.js";
-import { json } from "express/lib/response";
 
 const client = new Client({
     intents: [GatewayIntentBits.Guilds]
