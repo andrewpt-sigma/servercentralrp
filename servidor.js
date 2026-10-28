@@ -59,6 +59,7 @@ const apiwhitelist = rateLimit({
 })
 
 import { Client, GatewayIntentBits, ActivityType } from "discord.js";
+import { json } from "express/lib/response";
 
 const client = new Client({
     intents: [GatewayIntentBits.Guilds]
@@ -291,7 +292,7 @@ app.get('/bot/basededados/scm', limtett, async (req, res) => {
             }
         })
 
-        res.send(user)
+        res.json(user)
     }
     catch(error){
         console.log(error)
